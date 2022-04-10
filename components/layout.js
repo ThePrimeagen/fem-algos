@@ -19,8 +19,8 @@ function Layout({ children }) {
           </div>
           <Footer
             twitter={courseInfo.social.twitter}
-            github={courseInfo.social.github}
-            linkedin={courseInfo.social.linkedin}
+            youtube={courseInfo.social.youtube}
+            twitch={courseInfo.social.twitch}
           />
         </div>
       </HeaderProvider>

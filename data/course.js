@@ -2,18 +2,18 @@ import config from "../course.json";
 
 const DEFAULT_CONFIG = {
   author: {
-    name: "An Author",
-    company: "An Author's Company",
+    name: "ThePrimeagen",
+    company: "Netflix",
   },
-  title: "A Superb Course",
-  subtitle: "That Teaches Nice Things",
+  title: "Polygot Programming - TypeScript, Golang, Rustlang",
+  subtitle: "The course that teaches you new languages with languages you know.",
   frontendMastersLink: "",
-  description: "A nice course for nice people.",
-  keywords: ["a nice course", "for people", "to learn", "nice things"],
+  description: "This course is designed for those that want to expand their knowledge to other languages by building a tool within the new language, and not reading yet another language tutorial.  This will be a fast paced, high octain learning experience.",
+  keywords: ["ThePrimeagen", "Live Coding", "TypeScript", "JavaScript", "Golang", "RustLang", "Go", "Rust", "TS", "JS"],
   social: {
-    linkedin: "btholt",
-    github: "btholt",
-    twitter: "holtbt",
+    twitter: "ThePrimeagen",
+    twitch: "ThePrimeagen",
+    youtube: "ThePrimeagen",
   },
   productionBaseUrl: "/",
 };

@@ -1,17 +1,17 @@
 {
   "author": {
-    "name": "Brian Holt",
-    "company": "Stripe"
+    "name": "ThePrimeagen",
+    "company": "Netflix"
   },
-  "title": "Next.js Course Starter Kit",
-  "subtitle": "for Frontend Masters",
+  "title": "Polygot Programming - TypeScript, Golang, Rustlang",
+  "subtitle": "The course that teaches you new languages with languages you know.",
   "frontendMastersLink": "https://frontendmasters.com/courses/complete-react-v6/",
   "social": {
-    "linkedin": "btholt",
-    "github": "btholt",
-    "twitter": "holtbt"
+    "twitter": "theprimeagen",
+    "twitch": "theprimeagen",
+    "youtube": "theprimeagen"
   },
-  "description": "A starter kit for making really amazing courses, optimized for Frontend Masters",
-  "keywords": ["your", "Google", "keywords", "here"],
-  "productionBaseUrl": "/next-course-starter"
+  "description": "This course is designed for those that want to expand their knowledge to other languages by building a tool within the new language, and not reading yet another language tutorial.  This will be a fast paced, high octain learning experience.",
+  "keywords": ["ThePrimeagen", "Live Coding", "TypeScript", "JavaScript", "Golang", "RustLang", "Go", "Rust", "TS", "JS"],
+  "productionBaseUrl": "/ts-go-rust"
 }
