@@ -57,9 +57,13 @@ Check out [Advent of Code](www.adventofcode.com) for yourself this year!
 ## Problem 1 : Submarine navigation
 Without all the fluff and festive fun of advent of code here is th deets.
 
+<br />
+
 1.  Your submarine starts at position 0,0 (x position, depth)
 1.  Parse input to direct your submarine.
 1.  Multiply your depth * x progression to get an answer
+
+<br />
 
 Example input
 ```
@@ -70,6 +74,8 @@ up 3
 down 8
 forward 2
 ```
+
+<br />
 
 #### Note
 this means that up 3 is actually -3 from the y axis.
@@ -114,6 +120,46 @@ this means that up 3 is actually -3 from the y axis.
 ## Typescript
 Very easy.  I am going to intentionally over program it, to make it simple and
 to hopefully show some things that are weird in other languages.
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+## Golang
+this should feel surprisingly easy.
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+## Rust
+Ok, its hard
 
 <br />
 <br />

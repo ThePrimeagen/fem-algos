@@ -180,3 +180,34 @@ do you have go installed?
 
 Now would be an excellent time to get that done.  In fact, I think we should
 take a quick small break just to ensure it happens.
+
+### Go
+[Go Dev Docs](https://go.dev/doc/install)
+- Install the one for your operating system
+- You will want a later version of go.  1.18 has generics, very good.
+
+### Rust
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+- You can rustup to get nightly to have more fun features, and there are some
+  good features there.
+- or just stick to stable for a stable journey.
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
