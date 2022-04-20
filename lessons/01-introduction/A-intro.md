@@ -152,6 +152,7 @@ check out these courses.
 <br/>
 
 ## I hope you are excited
+And ready to rock
 
 <br/>
 <br/>

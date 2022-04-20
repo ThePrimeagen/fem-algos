@@ -102,9 +102,18 @@ They are a great way to get to learn the ecosystem.
 We will start the cli program the best way we can, CLI arguments.  This is
 where the rubber will meet the road.
 
-### Part 4 : The Config and Add operation
-### Part 5 : The rest of the operations
-### Part 6 : Conclusion
+### Part 4 : Print operation
+Printing is probably the most logical places to start.
+
+### Part 5 : Add operation
+Adding obviously is next after print so we can actually have print become
+interesting.
+
+### Part 6 : Rm operation
+Must kill that which we created
+
+### Part 7 : Conclusion
+Where to go next
 
 <br />
 <br />
