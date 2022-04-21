@@ -1,6 +1,6 @@
 ---
-title: "CSS"
-description: "CSS is for styling"
+title: "What are we building?"
+description: "The what and how of what we are going to build"
 ---
 
 ### Projector
@@ -78,17 +78,17 @@ the current working directory or a path provided.
 
 ```
 
-   +----------+      +----------+
-   | cli args | -+-> |  print   |
-   +----------+  |   +----------+
+   +----------+      +----------+    +----------+
+   | cli args | -+-> |  print   | -> | display  |
+   +----------+  |   +----------+    +----------+
                  |
-                 |   +----------+
-                 +-> |   add    |
-                 |   +----------+
+                 |   +----------+    +----------+
+                 +-> |   add    | -> |   save   |
+                 |   +----------+    +----------+
                  |
-                 |   +----------+
-                 +-> |    rm    |
-                     +----------+
+                 |   +----------+    +----------+
+                 +-> |    rm    | -> |   save   |
+                     +----------+    +----------+
 
 ```
 
@@ -120,6 +120,59 @@ we are going to use libraries for these.
 
 - Rust : clap
   - The greatest CLI parser by the mostest
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Finding key
+This is the fun part!  The _algorithm_ part.
+
+```bash
+/foo/bar/baz/path/to/folder projector
+
+# look for entries with
+/foo/bar/baz/path/to/folder
+/foo/bar/baz/path/to
+/foo/bar/baz/path
+/foo/bar/baz
+/foo/bar
+/foo
+/
+
+# Merge each of the value set together from right to left,
+# left being lowest priority
+```
+
+#### The algo is the same for specific keys
+
+```bash
+/foo/bar/baz/path/to/folder projector foo
+
+# look for entries with
+/foo/bar/baz/path/to/folder # no foo
+/foo/bar/baz/path/to # no foo
+/foo/bar/baz/path # found foo < return value now
+```
+
+### Deleting/Adding Key
+For deleting/adding the key, we should probably only delete at the `pwd`.
+
+#### Does deleting coming before adding trigger your ocd?
+Buckle up
 
 <br />
 <br />
