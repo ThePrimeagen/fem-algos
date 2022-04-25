@@ -157,7 +157,7 @@ script.
 
 ### Example of CLI (wont match exactly)
 
-Here is an example i'll be putting under `src/cli.ts`
+Here is an example i'll be putting under `src/opts.ts`
 
 ```typescript
 import cli from "command-line-args";
@@ -178,7 +178,7 @@ export type ProjectorOpts = {
 type CliArgs = {
     pwd?: string; // projector --pwd ...
     config?: string; // projector --config ...
-    command: string[];
+    command?: string[];
 }
 
 function isOperationCommand(op?: string): boolean {
@@ -186,15 +186,15 @@ function isOperationCommand(op?: string): boolean {
 }
 
 function getTerms(args: CliArgs): string[] {
-    if (isOperationCommand(args.command[0])) {
-        return args.command.slice(1);
+    if (isOperationCommand(args?.command?.[0])) {
+        return args?.command?.slice(1) || [];
     }
 
-    return args.command;
+    return args.command || [];
 }
 
 function getOperation(args: CliArgs): Operation {
-    switch (args.command[0]) {
+    switch (args?.command?.[0]) {
     case "add": return Operation.Add;
     case "rm": return Operation.Remove;
     default: return Operation.Print;
@@ -216,6 +216,27 @@ export default function getArgs(): ProjectorOpts {
     };
 }
 ```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### So lets build it again, but in Go!
+This is what I think is very valuable.  You have a concrete idea of what we are
+doing, now we do it in a language you are not familiar.
 
 <br />
 <br />
