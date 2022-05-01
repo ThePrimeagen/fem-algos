@@ -3,6 +3,34 @@ title: "TypeScript : CLI"
 description: "Lets build the cli argument portion of the typescript program"
 ---
 
+### REMEMBER: Breaking the problem up
+
+```
+   1. Creating the CLI options.  These are things we can parse
+      from the command line interface.
+
+   +----------+
+   | cli opts | ->
+   +----------+
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 ### TypeScript
 I am going to make some basic assumptions that everyone watching this is
 familiar with TypeScript and there are probably some of you out there that are
@@ -162,58 +190,18 @@ Here is an example i'll be putting under `src/opts.ts`
 ```typescript
 import cli from "command-line-args";
 
-export enum Operation {
-    Print,
-    Add,
-    Remove
-}
-
-export type ProjectorOpts = {
+export type ProjectorOptions = {
     pwd?: string; // projector --pwd ...
     config?: string; // projector --config ...
-    operation: Operation; // print, add, remove
-    terms: string[]; // <key>*, <key> <value>, <key>
+    arguments?: string[];
 }
 
-type CliArgs = {
-    pwd?: string; // projector --pwd ...
-    config?: string; // projector --config ...
-    command?: string[];
-}
-
-function isOperationCommand(op?: string): boolean {
-    return op === "add" || op === "rm";
-}
-
-function getTerms(args: CliArgs): string[] {
-    if (isOperationCommand(args?.command?.[0])) {
-        return args?.command?.slice(1) || [];
-    }
-
-    return args.command || [];
-}
-
-function getOperation(args: CliArgs): Operation {
-    switch (args?.command?.[0]) {
-    case "add": return Operation.Add;
-    case "rm": return Operation.Remove;
-    default: return Operation.Print;
-    }
-}
-
-export default function getArgs(): ProjectorOpts {
-    const cliArgs = cli([
+export default function getOptions(): ProjectorOptions {
+    return cli([
         { name: 'config', type: String },
         { name: 'pwd', type: String },
-        { name: 'command', type: String, defaultOption: true, multiple: true },
-    ]) as CliArgs;
-
-    return {
-        pwd: cliArgs.pwd,
-        config: cliArgs.config,
-        terms: getTerms(cliArgs),
-        operation: getOperation(cliArgs),
-    };
+        { name: 'arguments', type: String, defaultOption: true, multiple: true },
+    ]) as ProjectorOptions;
 }
 ```
 

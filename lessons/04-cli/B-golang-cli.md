@@ -128,57 +128,21 @@ Oh, and there is no terrible build experience like there is with ts.
 ### Example of CLI Options (pkg/cli/opts.go)
 
 ```go
-// pkg/cli/opts.go
-package cli
+package projector
 
 import (
 	"github.com/hellflame/argparse"
 )
 
-type Operation = int
-
-const (
-    Print Operation = iota
-    Add
-    Remove
-)
-
 type ProjectorOpts struct {
-    Pwd string // projector --pwd ...
-    Config string // projector --config ...
-    Operation Operation // print, add, remove
-    Terms []string // <key>*, <key> <value>, <key>
+    Pwd string
+    Config string
+    Arguments []string
 }
-
-func isOperationCommand(op string) bool {
-    return op == "add" || op == "rm";
-}
-
-func getTerms(commands []string) []string {
-
-    if (len(commands) > 0 && isOperationCommand(commands[0])) {
-        return commands[1:]
-    }
-
-    return commands
-}
-
-func getOperation(commands []string) Operation {
-    if len(commands) == 0 {
-        return Add
-    }
-
-    switch (commands[0]) {
-    case "add": return Add
-    case "rm": return Remove
-    }
-    return Print
-}
-
 
 func GetOptions() (*ProjectorOpts, error) {
     parser := argparse.NewParser("projector", "gets all the values", &argparse.ParserConfig{DisableDefaultShowHelp: true})
-    terms := parser.Strings("f", "foo", &argparse.Option{
+    args := parser.Strings("f", "foo", &argparse.Option{
         Positional: true,
         Default: "",
         Required: false,
@@ -195,8 +159,7 @@ func GetOptions() (*ProjectorOpts, error) {
     return &ProjectorOpts {
         Pwd: *pwd,
         Config: *config,
-        Operation: getOperation(*terms),
-        Terms: getTerms(*terms),
+        Arguments: *args,
     }, nil
 }
 ```
