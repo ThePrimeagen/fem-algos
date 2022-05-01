@@ -100,7 +100,7 @@ need to take these and create them into something useful.
 ### Lets build the Projector object
 
 ```bash
-src/projector.ts
+src/config.ts
 ```
 
 LETS BUILD!!!
@@ -195,8 +195,12 @@ export default function projector(opts: ProjectorOpts): Projector {
 ### Lets add some tests
 
 ```bash
-src/__tests__/projector.ts
+src/__tests__/config.ts
 ```
+
+*NOTE* I had errors with jest v28 and ts-jest.  Make sure we use 27, unless its
+fixed by the time i do this presentation or you are watching it and we can
+ignore it :)
 
 ```bash
 yarn add -D jest ts-jest @types/jest
