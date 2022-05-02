@@ -134,7 +134,7 @@ export enum Operation {
     Remove
 }
 
-export type Projector = {
+export type ProjectorConfig = {
     pwd: string;
     config: string;
     operation: Operation;
