@@ -161,9 +161,12 @@ export default class Projector {
         const fd = await fsp.open(config.config, "a");
         try {
             const data = JSON.parse((await fd.readFile()).toString());
+            fd.close();
             return new Projector(config.pwd, data);
         } catch (e) {
+            fd.close();
         }
+
         return Projector.empty(config.pwd);
     }
 
