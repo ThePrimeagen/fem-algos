@@ -5,7 +5,7 @@ const DEFAULT_CONFIG = {
     name: "ThePrimeagen",
     company: "Netflix",
   },
-  title: "Polygot Programming - TypeScript, Golang, Rustlang",
+  title: "Polygot Programming - TS, Go, Rust",
   subtitle: "The course that teaches you new languages with languages you know.",
   frontendMastersLink: "",
   description: "This course is designed for those that want to expand their knowledge to other languages by building a tool within the new language, and not reading yet another language tutorial.  This will be a fast paced, high octain learning experience.",

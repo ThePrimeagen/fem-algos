@@ -54,6 +54,26 @@ Check out [Advent of Code](www.adventofcode.com) for yourself this year!
 <br />
 <br />
 
+## Problem 1
+[Submarine Time](https://adventofcode.com/2021/day/2)
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 ## Problem 1 : Submarine navigation
 Without all the fluff and festive fun of advent of code here is th deets.
 
