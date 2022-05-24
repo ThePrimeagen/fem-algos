@@ -8,7 +8,7 @@ the transitioning easier.
 
 <br />
 
-Remember
+Remember, this is fast paced, but there is room for questions.
 
 <br />
 <br />
@@ -190,7 +190,6 @@ You can have one mut reference and no reference at the same time.
 * Rust + Enums
 * Error Handling
 * Testing
-
 
 <br />
 <br />
@@ -678,6 +677,7 @@ The reason why i like it is because of control flow and where things can go
 wrong.
 
 #### Example time!
+Remember, errors are just values
 
 <br />
 <br />
@@ -829,6 +829,141 @@ fn main() -> Result<(), usize> {
 * TypeScript : Cries in Configuration
 * GoLang : Meh
 * Rust : oyes
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+```bash
+src/__tests__/test.ts
+```
+
+```typescript
+test("foo", function() {
+    expect("foo").toEqual("foo");
+});
+```
+
+```bash
+yarn add jest ts-jest @types/jest
+npx jest
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Go version
+there is some contention with how / where to put your tests.
+
+* test public interfaces only
+* test within the package
+
+```
+pkg/name/file.go
+pkg/name/file_test.go
+```
+
+```
+package name_test
+
+import "testing"
+
+func TestThisFunc(t *testing.T) {
+    this := 5
+    if this != 7 {
+        t.Errorf("expected %v to equal 7", this)
+    }
+}
+```
+
+```bash
+go test ./...
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Rust Version
+Rust, of course, is the best
+
+* test in file
+
+```
+... // code ...
+
+#[cfg(test)]
+mod test {
+    #[test]
+    fn this_test() {
+        assert_eq!(5, 7);
+    }
+}
+```
+
+```bash
+cargo test
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### You will forget everything i just said
+That is ok.  The best way to make it set?  Build it.
 
 <br />
 <br />

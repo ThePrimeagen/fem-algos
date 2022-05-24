@@ -47,6 +47,7 @@ No festivities
 
 1.  You are given lines ((x1, y1) -> (x2, y2))
 1.  You need to figure out which lines overlap and how many of them
+1.  Only consider horizontal and vertical lines
 
 <br />
 

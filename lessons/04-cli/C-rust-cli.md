@@ -87,152 +87,6 @@ This is the rust time... it will be a bit interesting.
 <br />
 <br />
 
-### Before we begin, lets talk error handling
-
-In rust error handling is done via a `Result` object.  Its really actually
-quite clever the way they did this.
-
-What is a result object?  Well, its just an enum, but not the type of enums you
-are use to.
-
-```typescript
-enum Foo {
-    Bar,
-    Baz,
-    Buzz,
-}
-```
-
-```go
-const (
-    Bar = iota,
-    Baz,
-    Buzz,
-)
-```
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-```rust
-enum Foo {
-    Bar,
-    Baz,
-    Buzz,
-}
-```
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-```rust
-enum Foo {
-    Bar(String),
-    Baz(i32),
-    Buzz(Vec<usize>),
-}
-```
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-```rust
-enum Result<V, E> {
-    Ok(V),
-    Err(E),
-}
-```
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-```rust
-fn my_fun(item: i32) -> Result<i32, SuperBadError> {
-    if item % 2 == 0 {
-        return Ok(item)
-    }
-    return Err(SuperBadError::SomeError)
-}
-
-fn calling_fn() -> Result<(), SuperBadError> {
-    my_fun(42)?
-    return Ok(())
-}
-```
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
 ### Project Structure
 
 After cargo init
@@ -248,58 +102,10 @@ Change it
 ```bash
 src/main.rs -> src/bin/projector.rs
 src/lib.rs
-src/error.rs
 src/opts.rs
 ```
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-```bash
-cargo add thiserror
-```
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-### Example of the Error src/error.rs
-
-```rust
-use thiserror::Error;
-
-#[derive(Error, Debug)]
-pub enum ProjectorError {
-
-}
-```
+### Lets program it!
 
 <br />
 <br />
@@ -333,7 +139,7 @@ pub struct ProjectorOpts {
     #[clap(short = 'p', long = "pwd")]
     pub pwd: Option<PathBuf>,
 
-    #[clap(short = 'c', long = "config", global = true)]
+    #[clap(short = 'c', long = "config")]
     pub config: Option<PathBuf>,
 
     #[clap(default_value = "")]

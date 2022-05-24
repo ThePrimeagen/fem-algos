@@ -172,8 +172,8 @@ Create it where you like
 
 ```bash
 yarn init -y
-yarn add command-line-args
-yarn add ts-node typescript
+yarn add command-line-args @types/command-line-args
+yarn add ts-node typescript @types/node
 git init
 echo "node_modules" > .gitignore
 mkdir src

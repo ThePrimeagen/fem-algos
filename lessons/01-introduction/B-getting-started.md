@@ -91,16 +91,16 @@ They are a great way to get to learn the ecosystem.
 
 ## Roadmap
 ### Part 1 : Getting familiar
-We will solve some simple string parsing problems.  This will help us just get
-acquainted with each language.
-
-<br />
-
-### Part 2 : First look
 Go and its simplicity<br />
 Rust and its complexity<br />
 Testing in each language<br />
 Strategies of testing<br />
+
+<br />
+
+### Part 2 : First look
+Some basics about each language + some simple string parsing problems.  This
+will help us just get acquainted with each language.
 
 <br />
 
