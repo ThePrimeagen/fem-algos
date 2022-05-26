@@ -89,83 +89,91 @@ LETS BUILD!!!
 ```rust
 use std::path::PathBuf;
 
-use crate::opts::ProjectorOpts;
-use crate::error::ProjectorError;
+use crate::opts::CLIOptions;
+use anyhow::{Result, anyhow, Context};
 
-pub struct ProjectorConfig {
-    pub operation: Operation,
-    pub pwd: PathBuf,
-    pub config: PathBuf,
-}
-
-#[derive(Debug)]
 pub enum Operation {
-    Print(Vec<String>),
+    Print(Option<String>),
     Add((String, String)),
     Remove(String),
 }
 
-impl TryInto<Operation> for Vec<String> {
-    type Error = ProjectorError;
+pub struct ProjectorConfig {
+    pub operation: Operation,
+    pub config: PathBuf,
+    pub pwd: PathBuf,
+}
 
-    fn try_into(self) -> Result<Operation, Self::Error> {
-        if self.len() == 0 {
-            return Ok(Operation::Print(self));
+impl TryFrom<Vec<String>> for Operation {
+    type Error = anyhow::Error;
+
+    fn try_from(mut value: Vec<String>) -> Result<Self, Self::Error> {
+        if value.len() == 0 {
+            return Ok(Operation::Print(None));
         }
 
-        if self[0] == "add" {
-            if self.len() != 3 {
-                return Err(ProjectorError::InvalidArguments{
-                    count: self.len() - 1,
-                    expected: 2
-                })
+        let term = value.get(0).unwrap();
+
+        if term == "add" {
+            if value.len() != 3 {
+                return Err(anyhow!("expected 2 arguments but you provided {}", value.len() - 1));
             }
-
-            return Ok(Operation::Add((
-                self[1].clone(),
-                self[2].clone(),
-            )))
+            let mut drain = value.drain(1..=2);
+            return Ok(Operation::Add((drain.next().unwrap(), drain.next().unwrap())));
         }
 
-        if self[0] == "rm" {
-            if self.len() != 2 {
-                return Err(ProjectorError::InvalidArguments{
-                    count: self.len() - 1,
-                    expected: 1
-                })
+        if term == "rm" {
+            if value.len() != 2 {
+                return Err(anyhow!("expected 1 arguments but you provided {}", value.len() - 1));
             }
-
-            return Ok(Operation::Remove(self[1].clone()))
+            let mut drain = value.drain(1..2);
+            return Ok(Operation::Remove(drain.next().unwrap()));
         }
 
-        return Ok(Operation::Print(self))
+        if value.len() != 1 {
+            return Err(anyhow!("expected 0 or 1 arguments but you provided {}", value.len()));
+        }
+
+        return Ok(Operation::Print(Some(term.clone())));
     }
 }
 
-fn get_pwd(pwd: Option<PathBuf>) -> Result<PathBuf, ProjectorError> {
-    if let Some(pwd) = pwd {
-        return Ok(pwd);
+fn get_config(config: Option<PathBuf>) -> Result<PathBuf> {
+    if let Some(c) = config {
+        return Ok(c);
     }
 
-    return Ok(std::env::current_dir()?);
-}
+    if let Ok(home) = std::env::var("XDG_CONFIG_HOME") {
 
-fn get_config(config: Option<PathBuf>) -> Result<PathBuf, ProjectorError> {
-    if let Some(config) = config {
-        return Ok(config);
+        let mut home = PathBuf::from(home);
+        home.push("projector");
+        home.push("projector.json");
+        return Ok(home);
     }
 
-    let mut config = PathBuf::from(std::env::var("HOME")?);
-    config.push("projector");
-    config.push("projector.json");
-    return Ok(config);
+    if let Ok(home) = std::env::var("HOME") {
+        let mut home = PathBuf::from(home);
+        home.push("projector");
+        home.push("projector.json");
+        return Ok(home);
+    }
+
+    return Err(anyhow!("unable to find config location"));
 }
 
-pub fn to_config(opts: ProjectorOpts) -> Result<ProjectorConfig, ProjectorError> {
+fn get_pwd(pwd: Option<PathBuf>) -> Result<PathBuf> {
+    if let Some(p) = pwd {
+        return Ok(p);
+    }
+
+    return std::env::current_dir().context("unable to get std::env::current_dir");
+}
+
+pub fn get_projector_config(opts: CLIOptions) -> Result<ProjectorConfig> {
     return Ok(ProjectorConfig {
-        pwd: get_pwd(opts.pwd)?,
-        config: get_config(opts.config)?,
         operation: opts.arguments.try_into()?,
+        config: get_config(opts.config)?,
+        pwd: get_pwd(opts.pwd)?,
     });
 }
 ```
@@ -186,120 +194,4 @@ pub fn to_config(opts: ProjectorOpts) -> Result<ProjectorConfig, ProjectorError>
 <br />
 <br />
 <br />
-
-### Tests you are likely not familiar with
-Testing is a delight with rust.
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-### Your code could look like this!
-
-```rust
-// ... rest of config.rs
-#[cfg(test)]
-mod test {
-    use crate::error::ProjectorError;
-
-    use super::Operation;
-
-    #[test]
-    fn test_operation() -> Result<(), ProjectorError> {
-        let operation: Operation = vec![
-            String::from("foo"),
-            String::from("bar"),
-            String::from("baz"),
-        ].try_into()?;
-
-        assert_eq!(operation, Operation::Print(vec![
-            String::from("foo"),
-            String::from("bar"),
-            String::from("baz"),
-        ]));
-
-        let operation: Operation = vec![
-            String::from("add"),
-            String::from("bar"),
-            String::from("baz"),
-        ].try_into()?;
-
-        assert_eq!(operation, Operation::Add((
-            String::from("bar"),
-            String::from("baz"),
-        )));
-
-        let operation: Operation = vec![
-            String::from("rm"),
-            String::from("bar"),
-        ].try_into()?;
-
-        assert_eq!(operation, Operation::Remove(
-            String::from("bar"),
-        ));
-
-        let operation: Result<Operation, ProjectorError> = vec![
-            String::from("rm"),
-            String::from("bar"),
-            String::from("baz"),
-        ].try_into();
-
-        assert_eq!(operation.is_err(), true);
-        match operation {
-            Err(ProjectorError::InvalidArguments{count, expected}) => {
-                assert_eq!(count, 2);
-                assert_eq!(expected, 1);
-            },
-            _ => unreachable!(),
-        }
-
-        let operation: Result<Operation, ProjectorError> = vec![
-            String::from("add"),
-            String::from("bar"),
-        ].try_into();
-
-        assert_eq!(operation.is_err(), true);
-        match operation {
-            Err(ProjectorError::InvalidArguments{count, expected}) => {
-                assert_eq!(count, 1);
-                assert_eq!(expected, 2);
-            },
-            _ => unreachable!(),
-        }
-
-        return Ok(());
-    }
-}
-```
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
 

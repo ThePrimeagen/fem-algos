@@ -39,6 +39,47 @@ be any noticeable perf win, but it can bite you on mutation.
 <br/>
 <br/>
 
+### Errors
+when you may encounter an error, your function should return pointer
+
+```go
+type Foo struct {}
+
+func CreateFoo() (*Foo, error) {
+    if some_err_condition {
+        return nil, fmt.Error("Here is an error!")
+    }
+
+    return &Foo{}, nil
+}
+
+...
+this is where the infamous
+
+if err != nil {
+    return nil, err
+}
+
+comes from
+```
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 ### Rust, once you have the basics down, is actually pretty footgunless
 Its only when you go into async does it go terrible.  Luckily we are not doing
 that.  I still suck at doing it well.
