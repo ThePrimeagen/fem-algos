@@ -96,93 +96,85 @@ import (
 	"path"
 )
 
+type Lookup = map[string]map[string]string
 type ProjectorData struct {
-    Projector map[string]map[string]string `json:"projector"`
+    Projector Lookup `json:"projector"`
 }
 
 type Projector struct {
-    pwd string
-    data ProjectorData
+	data   ProjectorData
+	config *ProjectorConfig
 }
 
 func (p *Projector) GetValue(key string) (string, bool) {
+    found := false
+    out := ""
 
-    var result string
-    found := true
+    curr := p.config.Pwd
+    prev := ""
 
-    var currentDirectory = p.pwd
     for {
-        if values, found := p.data.Projector[currentDirectory]; found {
-            if value, found := values[key]; found {
-                result = value
-                break;
+
+        if dir, prs := p.data.Projector[curr]; prs {
+            if value, prs := dir[key]; prs {
+                found = true
+                out = value
+                break
             }
         }
 
-        nextDirectory := path.Dir(currentDirectory)
-        if nextDirectory == currentDirectory {
-            found = false
-            break;
+        if curr == prev {
+            break
         }
 
-        currentDirectory = nextDirectory
+        prev = curr
+        curr = path.Dir(curr)
     }
 
-    return result, found
+    return out, found
 }
 
 func (p *Projector) SetValue(key string, value string) {
-    _, ok := p.data.Projector[p.pwd]
-    if !ok {
-        p.data.Projector[p.pwd] = map[string]string{}
+    pwd := p.config.Pwd
+    if _, prs := p.data.Projector[pwd]; !prs {
+        p.data.Projector[pwd] = map[string]string{}
     }
-    p.data.Projector[p.pwd][key] = value
+
+    p.data.Projector[pwd][key] = value
 }
 
-func (p *Projector) RemoveValue(key string) {
-    _, ok := p.data.Projector[p.pwd]
-    if ok {
-        delete(p.data.Projector[p.pwd], key)
+func (p *Projector) DeleteValue(key string) {
+    pwd := p.config.Pwd
+    if dir, prs := p.data.Projector[pwd]; prs {
+        delete(dir, key)
     }
 }
 
-func Empty(pwd string) *Projector {
-    return &Projector{
-        pwd: pwd,
-        data: ProjectorData{
-            Projector: map[string]map[string]string{},
-        },
-    }
+func defaultProjector(config *ProjectorConfig) *Projector {
+	return &Projector{
+		config: config,
+		data:   ProjectorData{},
+	}
 }
 
 func FromConfig(config *ProjectorConfig) (*Projector, error) {
-    if _, err := os.Stat(path.Dir(config.Config)); os.IsNotExist(err) {
-        err := os.Mkdir(path.Dir(config.Config), 0755)
-        if err != nil {
-            return nil, err
-        }
-    }
+	if _, err := os.Stat(config.Config); os.IsNotExist(err) {
+		return defaultProjector(config), nil
+	}
 
-    if _, err := os.Stat(config.Config); os.IsNotExist(err) {
-        return Empty(config.Pwd), nil
-    }
+	bytes, err := os.ReadFile(config.Config)
+	if err != nil {
+		return defaultProjector(config), nil
+	}
 
-    // it does exist, we have to marshal
-    dat, err := os.ReadFile(config.Config)
-    if err != nil {
-        return nil, err
-    }
-
-    var data ProjectorData;
-
-    err = json.Unmarshal(dat, &data)
-    if err != nil {
-        return nil, err
-    }
-
-    return &Projector{
-        pwd: config.Pwd,
-        data: data,
+	var data ProjectorData
+	err = json.Unmarshal(bytes, &data)
+	if err != nil {
+		return defaultProjector(config), nil
+	}
+	return &Projector{
+        data,
+        config,
     }, nil
 }
 ```
@@ -232,104 +224,92 @@ package projector_test
 import (
 	"testing"
 
-	"github.com/theprimeagen/projector/pkg/projector"
+	"github.com/theprimeagen/go-tem/pkg/projector"
 )
 
-func runKeyTest(t *testing.T, pjtr *projector.Projector, key, value string) {
-    val, found := pjtr.GetValue("foo")
-    if !found {
-        t.Error("unable to find value for \"foo\"")
-    }
-
-    if val != value {
-        t.Errorf("expected value to be %v but received %v", value, val)
-    }
-}
-
-func TestAddValue(t *testing.T) {
-    data := projector.ProjectorData {
-        map[string]map[string]string{
-            "/foo/bar/baz": {
+func getData() *projector.ProjectorData {
+    return &projector.ProjectorData{
+        Projector: map[string]map[string]string{
+            "/": {
+                "bar": "buzz",
                 "foo": "bar1",
             },
-            "/foo/bar": {
+            "/foo": {
                 "foo": "bar2",
             },
-            "/foo": {
+            "/foo/bar": {
                 "foo": "bar3",
             },
-            "/": {
+            "/foo/bar/baz": {
                 "foo": "bar4",
             },
         },
-
     }
-
-    runKeyTest(t, projector.New("/foo/bar/baz/buzz", data), "foo", "bar1")
-    runKeyTest(t, projector.New("/foo/bar/baz", data), "foo", "bar1")
-    runKeyTest(t, projector.New("/foo/bar", data), "foo", "bar2")
-    runKeyTest(t, projector.New("/foo", data), "foo", "bar3")
-    runKeyTest(t, projector.New("/", data), "foo", "bar4")
 }
 
-func TestRemoveValue(t *testing.T) {
-    data := projector.ProjectorData {
-        map[string]map[string]string{
-            "/foo/bar/baz": {
-                "foo": "bar1",
-            },
-            "/foo/bar": {
-                "foo": "bar2",
-            },
-            "/foo": {
-                "foo": "bar3",
-            },
-            "/": {
-                "foo": "bar4",
-            },
-        },
+func getConfig(pwd string) *projector.ProjectorConfig {
+    return &projector.ProjectorConfig{
+        Pwd: pwd,
+        Config: "dnm",
+        Operation: projector.Print,
+        Arguments: []string{},
+    }
+}
 
+func TestGetValue(t *testing.T) {
+    p := projector.NewProjector(getConfig("/foo/bar"), getData())
+
+    val, ok := p.GetValue("foo")
+    if !ok {
+        t.Error("couldn't find value")
     }
 
-    prj := projector.New("/foo/bar/baz/buzz", data)
-    runKeyTest(t, prj, "foo", "bar1")
-    prj.RemoveValue("foo")
-    runKeyTest(t, prj, "foo", "bar1")
+    if val != "bar3" {
+        t.Errorf("expected bar3 but got %v", val)
+    }
 
-    prj = projector.New("/foo/bar/baz", data)
-    runKeyTest(t, prj, "foo", "bar1")
-    prj.RemoveValue("foo")
-    runKeyTest(t, prj, "foo", "bar2")
+    _, ok = p.GetValue("bazbar")
+    if ok {
+        t.Error("expected to find no value")
+    }
 
-    prj = projector.New("/foo/bar", data)
-    runKeyTest(t, prj, "foo", "bar2")
-    prj.RemoveValue("foo")
-    runKeyTest(t, prj, "foo", "bar3")
+
+    val, ok = p.GetValue("bar")
+    if !ok {
+        t.Error("couldn't find value")
+    }
+
+    if val != "buzz" {
+        t.Errorf("expected buzz but got %v", val)
+    }
 }
 
 func TestSetValue(t *testing.T) {
-    data := projector.ProjectorData {
-        map[string]map[string]string{
-            "/foo/bar/baz": {
-                "foo": "bar1",
-            },
-            "/foo/bar": {
-                "foo": "bar2",
-            },
-            "/foo": {
-                "foo": "bar3",
-            },
-            "/": {
-                "foo": "bar4",
-            },
-        },
+    p := projector.NewProjector(getConfig("/foo/bar"), getData())
+    p.SetValue("foo", "bar69")
+    val, ok := p.GetValue("foo")
 
+    if !ok {
+        t.Error("couldn't find value")
     }
 
-    prj := projector.New("/foo/bar/baz/buzz", data)
-    runKeyTest(t, prj, "foo", "bar1")
-    prj.SetValue("foo", "bar0")
-    runKeyTest(t, prj, "foo", "bar0")
+    if val != "bar69" {
+        t.Errorf("expected bar69 but got %v", val)
+    }
+}
+
+func TestRemoveValue(t *testing.T) {
+    p := projector.NewProjector(getConfig("/foo/bar"), getData())
+    p.DeleteValue("foo")
+    val, ok := p.GetValue("foo")
+
+    if !ok {
+        t.Error("couldn't find value")
+    }
+
+    if val != "bar2" {
+        t.Errorf("expected bar2 but got %v", val)
+    }
 }
 ```
 
@@ -351,6 +331,7 @@ func TestSetValue(t *testing.T) {
 <br />
 
 ### Crab people
+![Twitch](./images/pust.png)
 
 <br />
 <br />
@@ -368,6 +349,4 @@ func TestSetValue(t *testing.T) {
 <br />
 <br />
 <br />
-
-
 

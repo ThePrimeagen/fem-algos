@@ -70,6 +70,9 @@ So this is where the bulk of the program will exist.
 Lets get a codin!  Also remember, we want to build this is a way that makes it
 easy to test.
 
+
+Also, we will build the full projector object (more of a note for me than you)
+
 <br />
 <br />
 <br />
@@ -94,84 +97,69 @@ import fs from "fs";
 import path from "path";
 import { ProjectorConfig } from "./config";
 
-const fsp = fs.promises;
-
-export type ProjectorData = {
-    // other data globals.
-    //
+type ProjectorData = {
+    // todo: if we had other top level items, we could put them here
+    // such as settings or links
     projector: {
-        // path     -> { key : value }
-        [key: string]: {[key: string]: string}
+        [key: string]: {
+            [key: string]: string
+        }
     }
 }
 
-export default class Projector {
-    constructor(private pwd: string, private data: ProjectorData) { }
+type Value = string | undefined;
 
-    getValue(key: string): string | undefined {
-        // /foo/bar/baz
-        // ../baz
-        // ../bar
-        // /foo
-        // /
-        // done
-        //
-        let currentPath = this.pwd;
-        let result = undefined;
-        while (true) {
-            const value = this.data.projector[currentPath]?.[key];
-            if (value) {
-                result = value;
+const DEFAULT_VALUE = {projector: {}} as ProjectorData;
+export class Projector {
+    constructor(private config: ProjectorConfig,
+                private data: ProjectorData = DEFAULT_VALUE) { }
+
+    getValue(key: string): Value {
+        // pwd
+        // dirname(pwd) until empty
+        let prev: Value = undefined;
+        let curr = this.config.pwd;
+
+        let out: Value = undefined;
+        do {
+
+            let val = this.data.projector[curr]?.[key];
+            if (val !== undefined) {
+                out = val;
                 break;
             }
 
-            const nextPath = path.dirname(currentPath);
-            if (nextPath === currentPath) {
-                break;
-            }
-            currentPath = nextPath;
-        }
+            prev = curr;
+            curr = path.dirname(curr);
+        } while (prev !== curr);
 
-        return result;
+        return out;
     }
 
-    setValue(key: string, value: string): void {
-        let values = this.data.projector[this.pwd];
-        if (!values) {
-            values = this.data.projector[this.pwd] = {};
+    setValue(key: string, value: string) {
+        let pwd = this.config.pwd;
+        if (!this.data.projector[pwd]) {
+            this.data.projector[pwd] = {};
         }
 
-        values[key] = value;
+        this.data.projector[pwd][key] = value;
     }
 
-    removeKey(key: string): void {
-        const values = this.data.projector[this.pwd];
-        if (values) {
-            delete values[key];
-        }
+    deleteValue(key: string) {
+        delete this.data.projector[this.config.pwd]?.[key];
     }
 
-    static async fromConfig(config: ProjectorConfig): Promise<Projector> {
-        const dirname = path.dirname(config.config);
-        // TODO: should i really make a dir?
-        if (!fs.existsSync(dirname)) {
-            await fsp.mkdir(dirname, { recursive: true });
-        }
-
-        const fd = await fsp.open(config.config, "a");
+    static fromConfig(config: ProjectorConfig): Projector {
+        let data: ProjectorData = undefined;
         try {
-            const data = JSON.parse((await fd.readFile()).toString());
-            fd.close();
-            return new Projector(config.pwd, data);
-        } catch (e) {
-            fd.close();
+            if (fs.existsSync(config.config)) {
+                data = JSON.parse(fs.readFileSync(config.config).toString());
+            }
+        } catch {
+            data = undefined;
         }
 
-        return Projector.empty(config.pwd);
-    }
-
-    static empty(pwd: string): Projector {
-        return new Projector(pwd, {projector: {}});
+        return new Projector(config, data);
     }
 }
 ```
@@ -193,7 +181,7 @@ export default class Projector {
 <br />
 <br />
 
-### Did you eat your veges?
+### Did you eat your vegetables?
 Lets test
 
 <br />
@@ -216,57 +204,76 @@ Lets test
 ### Your tests could look like
 
 ```typescript
-import Projector from "../projector";
+import { Operation } from "../config";
+import { Projector } from "../projector";
 
-test("adding/finding keys", function() {
-    const projector = Projector.empty("/foo/bar/baz");
+function getConfig(pwd: string) {
+    return {
+        pwd,
+        config: "/foo/bar/baz",
+        operation: Operation.Add,
+        arguments: [],
+    };
+}
 
-    expect(projector.getValue("foo")).toEqual(undefined);
-    projector.setValue("foo", "bar");
-    expect(projector.getValue("foo")).toEqual("bar");
-});
-
-test("adding/finding keys adv", function() {
-    const pData = {
+function getData() {
+    return {
         projector: {
-            "/": {
-                foo: "bar"
-            },
-            "/foo": {
-                foo: "bar2"
-            },
-            "/foo/bar": {
-                foo: "bar3"
+            "/foo/bar/baz/buzz": {
+                "foo": "bar1"
             },
             "/foo/bar/baz": {
-                foo: "bar4"
+                "foo": "bar2"
+            },
+            "/foo/bar": {
+                "foo": "bar3"
+            },
+            "/foo": {
+                "foo": "bar4"
+            },
+            "/": {
+                "foo": "bar5",
+                "bar": "bazz1",
             },
         }
-    };
+    }
+}
 
-    expect(new Projector("/foo/bar/baz", pData).getValue("foo")).toEqual("bar4");
-    expect(new Projector("/foo/bar", pData).getValue("foo")).toEqual("bar3");
-    expect(new Projector("/foo", pData).getValue("foo")).toEqual("bar2");
-    expect(new Projector("/", pData).getValue("foo")).toEqual("bar");
+test("getting values", function() {
+    const projector = new Projector(getConfig("/foo/bar"), getData());
+
+    expect(projector.getValue("foo")).toEqual("bar3");
+    expect(projector.getValue("blaz")).toEqual(undefined);
+    expect(projector.getValue("bar")).toEqual("bazz1");
 });
 
-test("rm keys", function() {
-    const pData = {
-        projector: {
-            "/foo": {
-                foo: "true",
-            }
-        }
-    };
+test("setting values", function() {
+    const projector = new Projector(getConfig("/foo/bar"), getData());
 
-    let projector = new Projector("/foo/bar/baz", pData);
-    projector.removeKey("foo");
+    expect(projector.getValue("foo")).toEqual("bar3");
+    projector.setValue("foo", "barNever");
+    expect(projector.getValue("foo")).toEqual("barNever");
 
-    expect(projector.getValue("foo")).toEqual("true");
+    const p2 = new Projector(getConfig("/foo"), getData());
+    expect(p2.getValue("foo")).toEqual("bar4");
 
-    projector = new Projector("/foo", pData);
-    projector.removeKey("foo");
-    expect(projector.getValue("foo")).toEqual(undefined);
+    const p3 = new Projector(getConfig("/foo/bar/baz"), getData());
+    expect(p3.getValue("foo")).toEqual("bar2");
+});
+
+test("deleting values", function() {
+    const projector = new Projector(getConfig("/foo/bar/baz"), getData());
+
+    expect(projector.getValue("foo")).toEqual("bar2");
+    projector.deleteValue("foo");
+    expect(projector.getValue("foo")).toEqual("bar3");
+    projector.deleteValue("foo");
+    expect(projector.getValue("foo")).toEqual("bar3");
+
+    const p2 = new Projector(getConfig("/foo/bar"), getData());
+    expect(p2.getValue("foo")).toEqual("bar3");
+    p2.deleteValue("foo");
+    expect(p2.getValue("foo")).toEqual("bar4");
 });
 ```
 

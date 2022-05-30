@@ -48,14 +48,21 @@ TODO: the thing we leave in which we never fix
 this is where i feel our good decisions start to compound
 
 ```rust
-pub fn save(&self, config: &ProjectorConfig) -> Result<(), ProjectorError> {
-    let contents = serde_json::to_string(&self.data)?;
-    std::fs::write(&config.config, contents)?;
+pub fn save(&self) -> Result<()> {
+    let result = serde_json::to_string(&self.data)?;
+    // todo... mkdir
+    if let Some(p) = self.config.config.parent() {
+        if std::fs::metadata(p).is_err() {
+            std::fs::create_dir_all(p).ok();
+        }
+    }
+
+    std::fs::write(&self.config.config, result)?;
 
     return Ok(());
 }
-```
 
+```
 <br />
 <br />
 <br />

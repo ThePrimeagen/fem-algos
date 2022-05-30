@@ -68,7 +68,6 @@ As I have mentioned i stream and make yt videos.  I get asked this question cons
 <br />
 <br />
 
-
 ## I love building cli apps
 They are a great way to get to learn the ecosystem.
 
@@ -110,19 +109,8 @@ where the rubber will meet the road.
 
 <br />
 
-### Part 4 : Print operation
-Printing is probably the most logical places to start.
-
-<br />
-
-### Part 5 : Add operation
-Adding obviously is next after print so we can actually have print become
-interesting.
-
-<br />
-
-### Part 6 : Rm operation
-Must kill that which we created
+### Part 4 : Building the core of the program
+The operations our program needs to perform.
 
 <br />
 

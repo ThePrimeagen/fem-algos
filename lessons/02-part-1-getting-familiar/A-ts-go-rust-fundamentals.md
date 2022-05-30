@@ -11,6 +11,14 @@ the transitioning easier.
 Remember, this is fast paced, but there is room for questions.
 
 <br />
+
+We are not going over language specific or syntax.  So if you do have a
+question, speak up during those times and I'll go over anything specific.  But
+the goal here is to make a course that is geared towards people who feel
+comfortable with programming and would like to pick up a second or third
+language.
+
+<br />
 <br />
 <br />
 <br />

@@ -64,6 +64,8 @@ I will provide stopping points, fequently, along the way.
 ## Whoami
 name: ThePrimeagen
 
+Its not that odd of a name if you know the back story.
+
 <br/>
 <br/>
 <br/>

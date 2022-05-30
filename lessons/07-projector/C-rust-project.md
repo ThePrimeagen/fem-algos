@@ -88,6 +88,81 @@ RUST IT UP
 ### Here is what the code could look like
 
 ```rust
+use std::{collections::HashMap, path::PathBuf};
+use serde::{Deserialize, Serialize};
+use crate::config::ProjectorConfig;
+
+#[derive(Debug, Default, Deserialize, Serialize)]
+struct ProjectorData {
+    projector: HashMap<PathBuf, HashMap<String, String>>
+}
+
+pub struct Projector {
+    config: ProjectorConfig,
+    data: ProjectorData,
+}
+
+fn default_projector(config: ProjectorConfig) -> Projector {
+    let data = ProjectorData::default();
+    return Projector {
+        config,
+        data,
+    }
+}
+
+impl From<ProjectorConfig> for Projector {
+    fn from(config: ProjectorConfig) -> Self {
+        if std::fs::metadata(&config.config).is_err() {
+            return default_projector(config);
+        }
+
+        if let Ok(data) = std::fs::read_to_string(&config.config) {
+            let data = serde_json::from_str(&data);
+            if let Ok(data) = data {
+                return Projector {
+                    config,
+                    data,
+                }
+            }
+        }
+
+        return default_projector(config);
+    }
+}
+
+impl Projector {
+    pub fn get_value(&self, key: &str) -> Option<&String> {
+        let mut out = None;
+        let mut curr = Some(self.config.pwd.as_path());
+
+        while let Some(p) = curr {
+            if let Some(dir) = self.data.projector.get(p) {
+                let value = dir.get(key);
+                if value.is_some() {
+                    out = value;
+                    break;
+                }
+            }
+            curr = p.parent();
+        }
+
+        return out;
+    }
+
+    pub fn set_value(&mut self, key: &str, value: String) {
+        self.data.projector
+            .entry(self.config.pwd.clone())
+            .or_insert_with(|| HashMap::new())
+            .insert(key.to_string(), value);
+    }
+
+    pub fn delete_value(&mut self, key: &str) {
+        self.data.projector
+            .entry(self.config.pwd.clone())
+            .or_insert_with(|| HashMap::new())
+            .remove(key);
+    }
+}
 ```
 
 <br />
@@ -136,94 +211,77 @@ cargo add collection_macros
 ```rust
 #[cfg(test)]
 mod test {
-    use std::{collections::HashMap, path::PathBuf};
+    use std::{path::PathBuf, collections::HashMap};
 
     use collection_macros::hashmap;
 
-    use super::{Projector, ProjectorData};
+    use crate::config::{ProjectorConfig, Operation};
 
-    // Showing the difference between explicitly using PathBuf::from vs .into
-    fn test_data() -> ProjectorData {
+    use super::{ProjectorData, Projector};
+
+
+    fn get_config(pwd: PathBuf) -> ProjectorConfig {
+        return ProjectorConfig {
+            config: PathBuf::from("/foo"),
+            operation: Operation::Print(None),
+            pwd,
+        }
+    }
+
+    fn get_data() -> ProjectorData {
         return ProjectorData {
             projector: hashmap! {
-                PathBuf::from("/foo/bar/baz") => hashmap! {
-                    String::from("foo") => String::from("bar1")
-                },
-                PathBuf::from("/foo/bar") => hashmap! {
-                    String::from("foo") => String::from("bar2")
+                PathBuf::from("/") => hashmap! {
+                    "foo".into() => "bar1".into(),
+                    "bar".into() => "bazz".into(),
                 },
                 PathBuf::from("/foo") => hashmap! {
-                    String::from("foo") => String::from("bar3")
-                },
-                PathBuf::from("/") => hashmap! {
-                    String::from("foo") => String::from("bar4")
-                },
-            }
-        };
-    }
-
-    fn test_projector(pwd: PathBuf) -> Projector {
-        return Projector::from_data(pwd, test_data());
-    }
-
-    #[test]
-    fn finding_values() {
-        let projector = test_projector("/foo/bar/baz".into());
-        assert_eq!(projector.get_value("foo"), Some(String::from("bar1")));
-
-        let projector = test_projector("/foo/bar".into());
-        assert_eq!(projector.get_value("foo"), Some(String::from("bar2")));
-
-        let projector = test_projector("/foo".into());
-        assert_eq!(projector.get_value("foo"), Some(String::from("bar3")));
-
-        let projector = test_projector("/".into());
-        assert_eq!(projector.get_value("foo"), Some(String::from("bar4")));
-
-        let projector = Projector::from_data("/foo/bar/baz".into(), ProjectorData {
-            projector: hashmap! {
-                "/".into() => hashmap! {
-                    "foo".into() => "bar".into()
-                }
-            }
-        });
-
-        assert_eq!(projector.get_value("foo"), Some(String::from("bar")));
-    }
-
-    #[test]
-    fn adding_values() {
-        let mut projector = Projector::from_data("/foo/bar/baz".into(), ProjectorData {
-            projector: hashmap! {
-                "/".into() => hashmap! {
-                    "foo".into() => "bar".into()
-                }
-            }
-        });
-
-        assert_eq!(projector.get_value("foo"), Some(String::from("bar")));
-
-        projector.set_value("foo", "new-bar".into());
-        assert_eq!(projector.get_value("foo"), Some(String::from("new-bar")));
-    }
-
-    #[test]
-    fn removing_values() {
-        let mut projector = Projector::from_data("/foo/bar/baz".into(), ProjectorData {
-            projector: hashmap! {
-                "/".into() => hashmap! {
-                    "foo".into() => "bar".into()
-                },
-                "/foo/bar/baz".into() => hashmap! {
                     "foo".into() => "bar2".into()
-                }
-            }
-        });
+                },
+                PathBuf::from("/foo/bar") => hashmap! {
+                    "foo".into() => "bar3".into()
+                },
+                PathBuf::from("/foo/bar/baz") => hashmap! {
+                    "foo".into() => "bar3".into()
+                },
+            },
+        }
+    }
 
-        assert_eq!(projector.get_value("foo"), Some(String::from("bar2")));
+    #[test]
+    fn get_value() {
+        let proj = Projector {
+            data: get_data(),
+            config: get_config(PathBuf::from("/foo/bar")),
+        };
 
-        projector.remove_value("foo");
-        assert_eq!(projector.get_value("foo"), Some(String::from("bar")));
+        assert_eq!(proj.get_value("foo"), Some(&String::from("bar3")));
+        assert_eq!(proj.get_value("bar"), Some(&String::from("bazz")));
+        assert_eq!(proj.get_value("notehu"), None);
+    }
+
+    #[test]
+    fn set_value() {
+        let mut proj = Projector {
+            data: get_data(),
+            config: get_config(PathBuf::from("/foo/bar")),
+        };
+
+        assert_eq!(proj.get_value("foo"), Some(&String::from("bar3")));
+        proj.set_value("foo", "hello, fem".into());
+        assert_eq!(proj.get_value("foo"), Some(&String::from("hello, fem")));
+    }
+
+    #[test]
+    fn delete_value() {
+        let mut proj = Projector {
+            data: get_data(),
+            config: get_config(PathBuf::from("/foo/bar")),
+        };
+
+        assert_eq!(proj.get_value("foo"), Some(&String::from("bar3")));
+        proj.delete_value("foo");
+        assert_eq!(proj.get_value("foo"), Some(&String::from("bar2")));
     }
 }
 ```

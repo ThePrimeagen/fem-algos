@@ -47,20 +47,19 @@ TODO: the thing we leave in which we never fix
 ### The projector file
 
 ```go
-func (p *Projector) Save(config *ProjectorConfig) error {
-    bytes, err := json.Marshal(p.data);
+func (p *Projector) Save() error {
+    dir := path.Dir(p.config.Config)
+    if _, err := os.Stat(dir); os.IsNotExist(err) {
+        os.MkdirAll(dir, fs.FileMode(0755))
+    }
+
+    bytes, err := json.Marshal(p.data)
     if err != nil {
         return err
     }
 
-    file, err := os.Create(config.Config)
-    if err != nil {
-        return err
-    }
-    defer file.Close()
-    _, err = file.Write(bytes)
-
-    return err
+    os.WriteFile(p.config.Config, bytes, fs.FileMode(0755))
+    return nil
 }
 ```
 
