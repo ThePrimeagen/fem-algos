@@ -149,10 +149,10 @@ println!("b size: {}", b.len());
 
 ### The three simple rules
 #### Rule #1: Value
-Only one var can the value at a time.
+Only one value owner.
 
 ##### Note
-If the object implements copy, it can be implicitly copied
+If the object implements copy/clone, it can be implicitly copied
 
 ```rust
 let x = 5;
@@ -161,7 +161,7 @@ let y = x;
 println!("{}", x + y);
 ```
 
-#### Rule #1: Reference
+#### Rule #2: Reference
 You can have as many references as you like with the constraint that there are
 no mutable references alive.
 
@@ -172,7 +172,7 @@ let y = &x;
 println!("here is {} and {}", x, y);
 ```
 
-#### Mut Reference
+#### Rule #3:1 Mut Reference
 You can have one mut reference and no reference at the same time.
 
 ![Mutable Reference Error](./images/mut-ref-error.png)
