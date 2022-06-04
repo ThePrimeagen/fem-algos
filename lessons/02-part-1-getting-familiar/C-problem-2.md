@@ -46,8 +46,9 @@ Check out [Advent of Code](www.adventofcode.com) for yourself this year!
 No festivities
 
 1.  You are given lines ((x1, y1) -> (x2, y2))
-1.  You need to figure out which lines overlap and how many of them
 1.  Only consider horizontal and vertical lines
+1.  We wont solve the actual problem as its a bit verbose! But we will parse
+    the input!  Its fun But we will parse the input!  Its fun.
 
 <br />
 
@@ -64,32 +65,6 @@ Example input
 0,0 -> 8,8
 5,5 -> 8,2
 ```
-
-<br />
-
-#### Note
-* You don't get the size of the graph created, you simply get the lines that
-  are drawn and must infer it.
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-## All solutions to these problems can be found here
-[Problem Solutions](www.github.com/ThePrimeagen/solutions-aoc-fem)
 
 <br />
 <br />
@@ -149,7 +124,7 @@ Not much different.
 <br />
 
 ## Rust
-Hard.. again.
+Most fun, most excellent, did I mention I like rust, btw?
 
 <br />
 <br />

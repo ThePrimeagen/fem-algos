@@ -4,19 +4,74 @@ description: "Let me borrow that for a moment"
 
 ## The fundamentals of the languages.
 We are going to go over some fundamentals of each language to hopefully make
-the transitioning easier.
+the transitioning easier between these 3 languages.
 
 <br />
 
-Remember, this is fast paced, but there is room for questions.
+Remember, this is fast paced, but there is room for questions, as I have even
+made explicit stops.  If you are viewing this live on FrontEndMasters.com or
+twitch.tv/ThePrimeagen and have a question, please feel free to throw it in the
+chat and hopefully I can answer it!
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Syntax
+I am not going to cover language specifics and syntax.
+
+Example: what happens here?  If you have some experience with rust, please
+don't answer.
+
+```rust
+let foo = if boolean_statement {
+    0
+} else {
+    1
+};
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### TypeScript version
+```typescript
+const foo = boolean_statement ? 0 : 1;
+```
 
 <br />
 
-We are not going over language specific or syntax.  So if you do have a
-question, speak up during those times and I'll go over anything specific.  But
-the goal here is to make a course that is geared towards people who feel
-comfortable with programming and would like to pick up a second or third
-language.
+So if you do have a question, speak up during those times and I'll go over
+anything specific.  But the goal here is to make a course that is geared
+towards people who feel comfortable with programming and would like to pick up
+a second or third language.
 
 <br />
 <br />
@@ -448,7 +503,6 @@ fn main() {
         vec.push(String::from("Hello, world!"));
     }
 
-
     match opt2 {
         Option2::Baz => todo!(),
         Option2::Foo(_) => todo!(),
@@ -620,7 +674,7 @@ beneficial.
 1. returned errors
 1. thrown errors
 
-Pretty classic typescript conflation issues (null vs undefined).  (Explain me)
+Pretty classic javascriptism, conflation issues (null vs undefined).
 
 Lets go over an example!
 
@@ -686,6 +740,9 @@ wrong.
 
 #### Example time!
 Remember, errors are just values
+
+* create error
+* return error + struct
 
 <br />
 <br />
@@ -832,6 +889,27 @@ fn main() -> Result<(), usize> {
 <br />
 <br />
 
+### Anyhow?
+A nice library for writing great code with error handling is anyhow!  Lets look
+at it
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 ### Unit Testing!
 
 * TypeScript : Cries in Configuration
@@ -932,10 +1010,48 @@ go test ./...
 <br />
 <br />
 
+### Go does have an assertion library
+But we will not be using it.  We will just use what is built in during this
+course.
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 ### Rust Version
 Rust, of course, is the best
 
 * test in file
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ```
 ... // code ...
