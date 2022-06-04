@@ -42,6 +42,7 @@ Yes, but its 2020 question!
 <br />
 
 ## Problem 3 : Trees and something like free ski
+[AdventOfCode - Day 3](https://adventofcode.com/2020/day/3)
 
 1.  You are given the following input:
 ```
@@ -159,7 +160,7 @@ S I M P L E
 <br />
 
 ## Rust
-H A R D
+Easy or hard depending on how you do it
 
 <br />
 <br />

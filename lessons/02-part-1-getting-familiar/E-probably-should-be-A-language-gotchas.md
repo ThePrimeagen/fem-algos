@@ -6,16 +6,20 @@ description: "A couple quick tips"
 When defining methods on a struct you have two options
 
 ```go
-type Foo struct { }
+type Foo struct {
+    thing int
+}
 
 // value receiver
 func (f Foo) fA() {
     ...
+    f.thing = 5; // DOESNT DO ANYTHING
 }
 
 // pointer receiver
 func (f *Foo) fB() {
     ...
+    f.thing = 5; // CHANGES
 }
 ```
 
@@ -98,7 +102,7 @@ impl From<String> for Foo {
 
 * Iterators are really powerful
 
-* Don't forget Option and Result `.map` function
+* Don't forget Option and Result `.map` function and on iterator `flat_map`
 
 <br/>
 <br/>
