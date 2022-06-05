@@ -47,8 +47,7 @@ No festivities
 
 1.  You are given lines ((x1, y1) -> (x2, y2))
 1.  Only consider horizontal and vertical lines
-1.  We wont solve the actual problem as its a bit verbose! But we will parse
-    the input!  Its fun But we will parse the input!  Its fun.
+1.  We wont solve the actual problem as its a bit verbose!
 
 <br />
 

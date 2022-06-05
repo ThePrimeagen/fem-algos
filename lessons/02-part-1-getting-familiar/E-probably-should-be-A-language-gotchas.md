@@ -43,6 +43,57 @@ be any noticeable perf win, but it can bite you on mutation.
 <br/>
 <br/>
 
+### One more on go structs vs rust structs
+I have been had by this one, and I am sure that anyone with any go experience
+has been had by this as well.
+
+```go
+type GoLangStruct struct {
+    y int
+    x int
+}
+
+func NewStruct(x, y int) GoLangStruct {
+    return GoLangStruct{x, y}
+}
+
+func main() {
+    fmt.Printf("%+v\n", NewStruct(9, 6));
+}
+```
+
+```rust
+#[derive(Debug)]
+struct RustLangStruct {
+    y i32
+    x i32
+}
+
+fn new_struct(x i32, y i32) -> RustLangStruct {
+    return RustLangStruct{x, y};
+}
+
+func main() {
+    println!("{:?}\n", new_struct(9, 6));
+}
+```
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 ### Errors
 when you may encounter an error, your function should return pointer
 
@@ -66,7 +117,6 @@ if err != nil {
 
 comes from
 ```
-
 
 <br/>
 <br/>

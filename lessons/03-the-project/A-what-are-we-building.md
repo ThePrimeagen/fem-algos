@@ -33,6 +33,24 @@ the current working directory or a path provided.
 > {}
 ```
 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
 ##### Add/Get Value
 ```bash
 > /foo/bar> projector add foo bar
@@ -41,6 +59,24 @@ the current working directory or a path provided.
 > /foo/bar> projector foo
 > bar
 ```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 
 ##### Merging Data
 ```bash
@@ -55,6 +91,15 @@ the current working directory or a path provided.
 > cd ..
 > /foo/bar> projector
 > {"foo": "bar"}
+> /foo/bar> projector add bar baz
+> /foo/bar> cd baz
+> /foo/bar/baz> projector
+> {
+    "foo": "twitch", # from /foo/bar/baz
+    "bar": "baz" # from /foo/bar
+  }
+> /foo/bar/baz> projector bar
+> baz
 ```
 
 <br />

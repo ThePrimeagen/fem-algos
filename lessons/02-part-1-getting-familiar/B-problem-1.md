@@ -54,26 +54,6 @@ Check out [Advent of Code](www.adventofcode.com) for yourself this year!
 <br />
 <br />
 
-## Problem 1
-[Submarine Time](https://adventofcode.com/2021/day/2)
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
 ## Problem 1 : Submarine navigation
 Without all the fluff and festive fun of advent of code here is th deets.
 
@@ -99,26 +79,6 @@ forward 2
 
 #### Note
 this means that up 3 is actually -3 from the y axis.
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-## All solutions to these problems can be found here
-[Problem Solutions](www.github.com/ThePrimeagen/solutions-aoc-fem)
 
 <br />
 <br />

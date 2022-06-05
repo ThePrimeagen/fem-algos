@@ -69,10 +69,21 @@ src/
     ...
   lib.rs
   file_1.rs
+  errors.rs
 target/
   ... build stuff ...
 Cargo.toml # who is tom anyways?
 ```
+
+### Little note
+lib.rs needs to contain all the files you are using.
+
+```
+pub mod file_1.rs
+pub mod errors.rs
+```
+
+this way your `bin` folder can refer to these files.
 
 <br/>
 <br/>
