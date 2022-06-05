@@ -461,6 +461,62 @@ enum Thing {
 <br />
 
 ### Lets do it in rust!
+Lets start by creating a simple enum.
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### The code, its almost 1:1?
+
+```rust
+enum ThisIsRust {
+    Foo,
+    Bar,
+    Baz,
+}
+```
+
+```typescript
+enum ThisIsTypeScript {
+    Foo,
+    Bar,
+    Baz,
+}
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Did you know you can have types on enums?
+These are called sumtypes and they are the greatest thing ever.
 
 <br />
 <br />
@@ -548,10 +604,8 @@ fn main() {
 <br />
 <br />
 
-### So I said we will implement Option
-So lets do it!
-
-This will involve generics, if you are not familiar, that is ok.
+### Lets implement the Option enum
+Obviously we wont be able to use ? operator, but it will be awesome.
 
 <br />
 <br />
@@ -728,6 +782,26 @@ console.log("great success()");
 <br />
 <br />
 
+In general TypeScript uses exceptions for control flow and with promises its a
+mix of value vs throwing due to `.catch`.
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 ### Lets look at Go
 We haven't done much of go, but it does differ here from typescript.
 
@@ -860,6 +934,11 @@ fn main() -> Result<(), usize> {
 
     if res.is_ok() {
         //...
+    }
+
+    match res {
+        Err(e) => // ...
+        Ok(v) => // ...
     }
 
     let x = res.unwrap_or(());
