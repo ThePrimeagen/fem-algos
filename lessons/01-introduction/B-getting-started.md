@@ -166,10 +166,10 @@ the goal is to teach / expose we will stay more on the happy path.
 <br />
 
 ### Canonical
-I will try to create my code to be similar amoung the three languages for
-learning purposes.  This means there will be a thing here or there that isn't
-quite as canonical as it may be.  Also canonical tends to be a bit dependent on
-the individual.
+So since there is going to be three languages used, in some sense I will keep
+the implementations similar.  But in other ways I will try to use more of the
+"canonical" way of doing things.  Canonical looks differently in each language
+and javascript, I am unsure if there is such things as canonical.
 
 <br />
 <br />
@@ -215,7 +215,7 @@ Now would be an excellent time to get that done.  In fact, I think we should
 take a quick small break just to ensure it happens.
 
 ### Go
-[Go Dev Docs](https://go.dev/doc/install)
+[Go Dev Docs](https://go.dev/doc/install) (https://go.dev/doc/install)
 - Install the one for your operating system
 - You will want a later version of go.  1.18 has generics, very good.
 
