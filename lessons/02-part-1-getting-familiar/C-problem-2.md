@@ -5,6 +5,12 @@ description: "its l337 code time"
 ## Advent of Code Again?
 yes, lets do something that will require a bit more effort
 
+Don't forget to install `cargo-edit` it will give you `cargo add`
+[cargo-edit](https://github.com/killercup/cargo-edit)
+```bash
+cargo install cargo-edit
+```
+
 <br />
 <br />
 <br />
