@@ -239,6 +239,24 @@ fn main() {
     println!("{}", x + y + z);
 }
 ```
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Questions?
 
 <br />
 <br />
@@ -259,7 +277,9 @@ fn main() {
 
 ### Moar things to cover
 * Rust + Enums (Options)
+  * Options
 * Error Handling
+  * Results
 * Testing
 
 <br />
@@ -279,43 +299,10 @@ fn main() {
 <br />
 <br />
 
-### Enums and Options
-Options are like nullable values
+### Enums
+Lets look at emuns in typescript, go, and rust.
 
-* First, lets look at it in TypeScript
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-### What the code looks like
-
-```typescript
-type Foo = {
-    bar?: number;
-}
-
-function test(foo: Foo) {
-    if (foo.bar) { // this is annoying, yes
-        // undang
-    } else {
-        // dang
-    }
-}
-```
+First typescript, lets program up a quick example.
 
 <br />
 <br />
@@ -334,98 +321,7 @@ function test(foo: Foo) {
 <br />
 <br />
 
-### Lets play around with rust!
-Lets play around with options.  I'll show you a few things about them.
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-### Potential code for options
-
-```rust
-struct Foo {
-    bar: Option<i32>
-}
-
-fn main() {
-    let foo = Foo {
-        bar: None
-    };
-
-    let foo2 = Foo {
-        bar: Some(2)
-    };
-
-    if foo.bar.is_some() {
-        let sum = foo.bar.unwrap() + 5;
-    }
-
-    foo.bar.unwrap_or(0);
-
-    foo.bar.unwrap_or_else(|| {
-        return 5;
-    });
-
-    let out = foo.bar.map(|x| {
-        return x + 5;
-    });
-}
-```
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-### But what is an Option?
-Here is the best part about rust.  You can create that type.
-
-Lets talk about enums!  First lets talk about typescript enums
-
-#### Lets build a typescript enum!
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+### I should have typed something like this.
 
 ```typescript
 enum Thing {
@@ -452,7 +348,8 @@ enum Thing {
 <br />
 <br />
 
-### Lets look at them in go
+### What about go?
+Onto another example!
 
 <br />
 <br />
@@ -471,7 +368,17 @@ enum Thing {
 <br />
 <br />
 
-### How do you feel about them in go?
+### Code
+
+```go
+type Foo = int
+
+const (
+    Thing Foo = iota
+    Other
+    That
+)
+```
 
 <br />
 <br />
@@ -490,11 +397,7 @@ enum Thing {
 <br />
 <br />
 
-### Lets do it in rust!
-But what are enums?  Introducing a new type you have had very little experience
-with if you have only done typescript.
-
-First lets do a basic emun.
+### Now Rust
 
 <br />
 <br />
@@ -513,19 +416,11 @@ First lets do a basic emun.
 <br />
 <br />
 
-### The code, its almost 1:1?
+### Or is this typescirpt?
 
 ```rust
-enum ThisIsRust {
-    Foo,
-    Bar,
-    Baz,
-}
-```
-
-```typescript
-enum ThisIsTypeScript {
-    Foo,
+enum Thing {
+    Foo, // or give them no value and it will start at 0 and increment
     Bar,
     Baz,
 }
@@ -548,13 +443,10 @@ enum ThisIsTypeScript {
 <br />
 <br />
 
-### Lets make them magic...
-Types on enums?  These are called SumTypes
+### Why go over enums...
+They are simple constructs.  Well, they are simple in other languages.
 
-Lets create code with several types:
-* Vec<String>
-* String
-* Option<i32>
+Lets dive more into them with rust.  Let me show you how you can add types...
 
 <br />
 <br />
@@ -623,6 +515,171 @@ fn main() {
 <br />
 <br />
 
+### What does this mean?
+This means that you can have an enum with many types, and these types can be
+generic.
+
+```rust
+enum Foo<T> {
+    Bar(T)
+}
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### But how is this practically useful?
+3 things.
+
+1. lists with many types
+1. Nullable
+1. Error Handling
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Lets start with nullable and TypeScript
+
+I think we have all seen code like this
+
+```typescript
+type Foo = {
+    bar?: number;
+}
+
+function test(foo: Foo) {
+    if (foo.bar) { // this is annoying, yes
+        // undang
+    } else {
+        // dang
+    }
+}
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Let me show you nullables in Rust
+These are Options, they are enums, they have a generic.
+
+
+```rust
+enum Option<T> {
+    None,
+    Some(T)
+}
+```
+
+Lets see how you can play with these in Rust
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### Potential code for options
+
+```rust
+struct Foo {
+    bar: Option<i32>
+}
+
+fn main() {
+    let foo = Foo {
+        bar: None
+    };
+
+    let foo2 = Foo {
+        bar: Some(2)
+    };
+
+    if foo.bar.is_some() {
+        let sum = foo.bar.unwrap() + 5;
+    }
+
+    foo.bar.unwrap_or(0);
+
+    foo.bar.unwrap_or_else(|| {
+        return 5;
+    });
+
+    let out = foo.bar.map(|x| {
+        return x + 5;
+    });
+}
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 ### Questions so far?
 
 <br />
@@ -643,6 +700,7 @@ fn main() {
 <br />
 
 ### Lets implement the Option enum!
+For fun lets try to implement `map` and `is_some` in rust on our "option" type.
 
 <br />
 <br />
@@ -759,15 +817,17 @@ beneficial.
 <br />
 <br />
 
-### TypeScript
+### JavaScript (TypeScript)
+"Exceptions as control flow"
+
 2 types of errors that you will run across.
 
 1. returned errors
 1. thrown errors
 
-Pretty classic javascriptism, conflation issues (null vs undefined).
+Pretty classic javascriptism -- conflation issues
 
-Lets go over an example!
+Let me program you a live example!
 
 <br />
 <br />
@@ -822,6 +882,8 @@ console.log("great success()");
 In general TypeScript uses exceptions for control flow and with promises its a
 mix of value vs throwing due to `.catch`.
 
+not all errors can be caught and will just simply blow up somewhere...
+
 <br />
 <br />
 <br />
@@ -842,9 +904,9 @@ mix of value vs throwing due to `.catch`.
 ### Lets look at Go
 We haven't done much of go, but it does differ here from typescript.
 
-This is one of the most fundamental arguments against go is its error handling.
-I will say that the error handling i find better than typescript but definitely
-more boilerplate to deal with it.
+This is one of the most fundamental arguments against and for go is its error
+handling. I will say that the error handling i find better than typescript but
+definitely more boilerplate to deal with it.
 
 The reason why i like it is because of control flow and where things can go
 wrong.
@@ -935,7 +997,17 @@ func main() {
 <br />
 
 ### Rust
-Remember those enums (sumtypes)?  Its also how errors are handled.
+Remember those enums (sumtypes) and how I told you they handled errors?  Well,
+here is the `Result` type.
+
+```rust
+type Result<V, E> {
+    Err(E),
+    Ok(V)
+}
+```
+
+Lets make some examples of how to use them!
 
 <br />
 <br />
@@ -1092,7 +1164,7 @@ pkg/name/file.go
 pkg/name/file_test.go
 ```
 
-```
+```go
 package name_test
 
 import "testing"
@@ -1107,6 +1179,7 @@ func TestThisFunc(t *testing.T) {
 
 ```bash
 go test ./...
+go test ./path/to/package
 ```
 
 <br />
@@ -1151,6 +1224,8 @@ course.
 Rust, of course, is the best
 
 * test in file
+* One thing to be careful of is to what level private interfaces should be
+  tested.
 
 <br />
 <br />
@@ -1183,6 +1258,7 @@ mod test {
 
 ```bash
 cargo test
+cargo test path/to/file.rs
 ```
 
 <br />
