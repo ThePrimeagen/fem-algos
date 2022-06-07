@@ -207,7 +207,7 @@ println!("b size: {}", b.len());
 Only one value owner.
 
 ##### Note
-If the object implements copy/clone, it can be implicitly copied
+If the object implements copy, it can be implicitly copied
 
 ```rust
 let x = 5;
@@ -230,7 +230,15 @@ println!("here is {} and {}", x, y);
 #### Rule #3:1 Mut Reference
 You can have one mut reference and no reference at the same time.
 
-![Mutable Reference Error](./images/mut-ref-error.png)
+```rust
+fn main() {
+    let mut x = 5;
+    let y = &x;
+    let z = &mut x; // cannot borrow x as mutable
+                    // because its already as immutable
+    println!("{}", x + y + z);
+}
+```
 
 <br />
 <br />
@@ -250,7 +258,7 @@ You can have one mut reference and no reference at the same time.
 <br />
 
 ### Moar things to cover
-* Rust + Enums
+* Rust + Enums (Options)
 * Error Handling
 * Testing
 
@@ -271,7 +279,7 @@ You can have one mut reference and no reference at the same time.
 <br />
 <br />
 
-### Options
+### Enums and Options
 Options are like nullable values
 
 * First, lets look at it in TypeScript
@@ -301,10 +309,10 @@ type Foo = {
 }
 
 function test(foo: Foo) {
-    if (typeof foo === undefined) { // this is annoying, yes
-        // dang
+    if (foo.bar) { // this is annoying, yes
+        // undang
     } else {
-        // Undang
+        // dang
     }
 }
 ```
@@ -327,6 +335,7 @@ function test(foo: Foo) {
 <br />
 
 ### Lets play around with rust!
+Lets play around with options.  I'll show you a few things about them.
 
 <br />
 <br />
@@ -397,26 +406,9 @@ fn main() {
 ### But what is an Option?
 Here is the best part about rust.  You can create that type.
 
-Lets talk about enums!
+Lets talk about enums!  First lets talk about typescript enums
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-### Example of enum in TS
+#### Lets build a typescript enum!
 
 <br />
 <br />
@@ -437,9 +429,9 @@ Lets talk about enums!
 
 ```typescript
 enum Thing {
-    Foo = "Foo",
-    Bar = "Bar",
-    Baz = "Baz"
+    Foo = 1, // or give them no value and it will start at 0 and increment
+    Bar = 2,
+    Baz = 3,
 }
 ```
 
@@ -460,8 +452,49 @@ enum Thing {
 <br />
 <br />
 
+### Lets look at them in go
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+### How do you feel about them in go?
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 ### Lets do it in rust!
-Lets start by creating a simple enum.
+But what are enums?  Introducing a new type you have had very little experience
+with if you have only done typescript.
+
+First lets do a basic emun.
 
 <br />
 <br />
@@ -515,8 +548,13 @@ enum ThisIsTypeScript {
 <br />
 <br />
 
-### Did you know you can have types on enums?
-These are called sumtypes and they are the greatest thing ever.
+### Lets make them magic...
+Types on enums?  These are called SumTypes
+
+Lets create code with several types:
+* Vec<String>
+* String
+* Option<i32>
 
 <br />
 <br />
@@ -604,8 +642,7 @@ fn main() {
 <br />
 <br />
 
-### Lets implement the Option enum
-Obviously we wont be able to use ? operator, but it will be awesome.
+### Lets implement the Option enum!
 
 <br />
 <br />
