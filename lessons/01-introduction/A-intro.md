@@ -1,10 +1,10 @@
 ---
-title: "TS, Go, And Rust"
-description: "The polyglot programming experience."
+title: "The Last Algorithms Class You Need"
+description: "The greatest experience by the greatest live coder ever"
 ---
 
-## Welcome!
-Much excite!
+## I am back
+And I am going to whiteboard so hard.
 
 <br/>
 <br/>
@@ -22,9 +22,9 @@ Much excite!
 <br/>
 <br/>
 
-## So why 3 languages
-The chance is that you want to learn rust or go and simple language tutorials
-just don't cut it for you.
+## Why should I care about algorithms?
+* Isn't asking algorithms old fashion for interviews?
+* Haven't we moved past that?
 
 <br/>
 <br/>
@@ -42,8 +42,8 @@ just don't cut it for you.
 <br/>
 <br/>
 
-## There are going to be questions
-I will provide stopping points, fequently, along the way.
+## Time and Space Complexity
+We will not be proving, but we will go decently deep into thinking about things.
 
 <br/>
 <br/>
@@ -61,120 +61,8 @@ I will provide stopping points, fequently, along the way.
 <br/>
 <br/>
 
-## Whoami
-name: ThePrimeagen
-
-Its not that odd of a name if you know the back story.
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-[twitch](twitch.tv/ThePrimeagen)
-![Twitch](./images/TWITCH.png)
-[youtube](youtube.com/ThePrimeagen)
-![Twitch](./images/YT.png)
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-Work at a small dvd shipping company.  I think we will revolutionize the
-industry.
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-## The Pace
-We have a couple days.  There is a lot of programming to do.  So its going to
-be fast.  Really fast.  And if you want to move as fast as I do, you can always
-check out these courses.
-
-<br/>
-
-[Vim Fundamentals](https://frontendmasters.com/courses/vim-fundamentals/)
-![Vim](./images/vim.png)
-
-<br/>
-
-[Dev Productivity](https://frontendmasters.com/courses/developer-productivity/)
-![dev](./images/dev-prod.png)
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-## I hope you are excited
-And ready to rock
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-## Google is your friend, sometimes
-One more tip.  If I forget something today and have to google, you will see me
-try a few times first without googling.  Why?
+### FIXME FIXME FIXME
+The two words smashed together we all hate to see.
 
 <br/>
 <br/>

@@ -3,15 +3,15 @@
     "name": "ThePrimeagen",
     "company": "Netflix"
   },
-  "title": "Polygot Programming - TS, Go, and Rust",
-  "subtitle": "The course that teaches you new languages with languages you know.",
-  "frontendMastersLink": "https://frontendmasters.com/workshops/polyglot-go-rust",
+  "title": "The Last Algorithms Course You'll Need",
+  "subtitle": "Buckle up and get ready for the quicksort of a life time.",
+  "frontendMastersLink": "https://frontendmasters.com/workshops/",
   "social": {
     "twitter": "theprimeagen",
     "twitch": "theprimeagen",
     "youtube": "theprimeagen"
   },
-  "description": "This course is designed for those that want to expand their knowledge to other languages by building a tool within the new language, and not reading yet another language tutorial.  This will be a fast paced, high octain learning experience.",
-  "keywords": ["ThePrimeagen", "Live Coding", "TypeScript", "JavaScript", "Golang", "RustLang", "Go", "Rust", "TS", "JS"],
-  "productionBaseUrl": "/ts-go-rust"
+  "description": "This course is designed for those who have near zero knowledge of DSA and desire to become great.",
+  "keywords": ["ThePrimeagen", "Live Coding", "TypeScript", "JavaScript", "Algorithms", "DataStructures", "Data Structures", "TS"],
+  "productionBaseUrl": "/dsa"
 }
