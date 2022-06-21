@@ -106,3 +106,122 @@ having a queue's requirement for allocations.
 * Go over adding, removing, and expanding the buffer
 
 ### Questions?
+
+## Part 2 -- Recursion
+This is going to be its own section, though it really shouldn't be.
+
+Recursion isn't an algorithm or a data structure, its simply a technique of
+calling a function inside the function.  The easiest way of thinking of
+recursion is a by visually all recursion as the following.
+
+```typescript
+function foo(...) {
+    if (base_case) {
+        return ...
+    }
+
+    // potentially logic or conditions.
+    return foo(...);
+}
+```
+
+### the obvious problems
+* factorial
+* fibanoci
+
+You are probably thinking... why are not using a loop here?  This seems like a
+waste of time.  That is because it is and these are terrible examples of
+recursion.  Lets do a proper recursive example.
+
+* Maze solving.
+
+### Questions?
+
+## Part 3: Trees
+Where are trees used?
+* Your filesystem is a tree
+* The dom is a tree
+* Trees are massively important in compilers.  You have probably mininumly
+  heard the term Abstract Syntax Tree.
+
+(whiteboard only)
+### Think of lists
+What if our list, every now and then, has an extra path.  What if we have to
+search that list?  how do we do it?
+
+### The Tree
+Effectively this is a tree.  Lets invert it and put it in a spot in which makes
+it look like a tree.
+
+Definition of tree with examples.
+* general tree
+* binary tree
+* there are others, and we will address at least one later.
+
+### Traversals
+Lets start with some traversals and searching techniques.
+
+### in, pre, and post order traversals
+each of these are used to describe a way in which you identify which nodes you
+"visit" first.  For our sake it will just be printing the data value, which
+will be an integer.
+
+### Ordered traversals are specific implementations of DFS
+You have probably heard this term, depth first search.
+
+* To relate this back to our first data structure, it is using a stack as means
+  of searching.
+
+** draw it out as a stack of returns.
+
+### IMPLEMENT A DFS and GENERAL TREE
+
+### The next travesal
+If our previous one used a stack, what do you think the next one will use as
+its primary structure for holding information?
+
+Yes!  A queue!
+
+Instead of letting the stack (call stack), you will explicitly add it to a
+queue.  This is known as Breadth First Search (BFS)
+
+(whiteboard it)
+
+### IMPLEMENT A BFS on GENERAL TREE FROM PREVIOUS
+
+### Binary Trees
+Binary trees are very frequently used.  They make amazing.  They are used in
+syntax trees often.  Huffman encoding, which powers say http2 hpack encoding
+using static huffman encoding tree.
+
+#### What is a binary tree
+(whiteboard it)
+
+##### Lets do a "typical" interview question.
+Compare two binary trees to see if they are identical in value and shape.
+
+(Whiteboard it)
+(Implement it)
+
+#### Binary Search Tree
+So specific implementation of a binary tree is a Binary Search Tree (BST).
+They are used frequently, I have even implemented more than one in my job over
+the last decade.
+
+(whiteboard it)
+(Implement it)
+
+How much easier is it search a binary tree than binary searching an array?  A
+lot, because the bounds are built in.
+
+But we have problems.  We are only using premade binary trees... How do we make
+binary trees?  And worse... what if they become unbalanced...
+
+Two primary algoriths used for binary tree balancing are redblack and AVL. They
+are both fantastic algorithms.  Redblack tends to be the one that is used more
+frequently in the real world.
+
+AVL: (Whiteboard it)
+RedBlack: (Whiteboard it)
+
+We are going to implement avl, because its fun and I am running the course.
