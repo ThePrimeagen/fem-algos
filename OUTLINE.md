@@ -225,3 +225,30 @@ AVL: (Whiteboard it)
 RedBlack: (Whiteboard it)
 
 We are going to implement avl, because its fun and I am running the course.
+
+### There are more trees. ... More and more trees.
+So there are still more ways in which we can implement trees.  Lets talk heaps.
+
+(whiteboard them)
+
+They are very interesting and they always get asked in a google interview.  I
+think I have been asked this question at least 2x in google interviews.
+
+median calculation with a constant moving list.
+
+(implement it)
+
+### Questions?
+
+### Graphs
+
+#### Representation of graphs
+Adjacency List
+Adjacency Matrix
+
+....
+
+### Maps
+Yeah, these are more than just regular maps
+
+....
