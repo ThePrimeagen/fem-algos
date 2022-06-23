@@ -8,6 +8,7 @@
 * Time and Space complexity
 - light introduction.
 - big O notation.
+ * we mostly talk about worst case scenarios
 - explain constant, logn, n, nlogn, n^2, k^n, !n
 * Recursion
 - perhaps one of the hardest hurdles in all programming to get over.
@@ -29,6 +30,8 @@ and they are layed out contiguously in memory.
 ## Sort
 ### First Algorithm
 * Insertion sort
+
+#### How do we measure how fast this is?
 * Time and Space
 
 ### Second Algorithm
@@ -243,12 +246,39 @@ median calculation with a constant moving list.
 ### Graphs
 
 #### Representation of graphs
+(whiteboard)
+* types of graph
+* directed
+* undirected
+* weighted
+* acyclic
+* strongly connected components
+* topological sorting
+
+(whiteboard)
 Adjacency List
 Adjacency Matrix
 
-....
+(whiteboard)
+* Breadth first search
+* Depth first search
+* Prim's, Kruskals algorithm (MST)
+* Dijkstra's Algorithm
+* Bellman-Fords
+* Ford-Fulkerson (MaxFlow)
+* Topological sort
+* Strongly Connected Component
 
-### Maps
-Yeah, these are more than just regular maps
+(implementing?)
+* Dijkstra
 
-....
+### Questions
+
+### MashMaps
+(whiteboarding)
+* The basics of a map
+* collisions
+* underlying representation
+
+(implementing?)
+I think we should just create one for sure
