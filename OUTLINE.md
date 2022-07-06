@@ -244,6 +244,11 @@ median calculation with a constant moving list.
 ### Questions?
 
 ### Graphs
+The problem with euler and prussia!  What an interesting way to start the idea
+of graph theory
+
+"The definition of a graph is wide so that it can be represented as things connected to other things."
+Algorithms - Panos Souridas
 
 #### Representation of graphs
 (whiteboard)
@@ -270,11 +275,14 @@ Adjacency Matrix
 * Strongly Connected Component
 
 (implementing?)
+* DFS
+* BFS
 * Dijkstra
+* Prims
 
 ### Questions
 
-### MashMaps
+### MashHaps
 (whiteboarding)
 * The basics of a map
 * collisions
