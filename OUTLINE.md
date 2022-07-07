@@ -27,6 +27,11 @@ You probably actually just thinking list.  An array is a specified sized array
 in which you can store elements.  Each type in that array takes up the space,
 and they are layed out contiguously in memory.
 
+## Search
+### First Algorithm: Linear Search
+### Second Algorithm: Binary Search
+### Third Algorithm: 2 Crystal Ball Problem
+
 ## Sort
 ### First Algorithm
 * Insertion sort

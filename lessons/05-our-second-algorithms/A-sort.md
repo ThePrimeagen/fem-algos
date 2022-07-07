@@ -1,0 +1,84 @@
+---
+title: "Sort"
+description: "Our Second Algorithm set"
+---
+
+### Yes! Sorting!
+Yes, it wouldn't be an algorithm course without at least a couple sorts!  We
+will even implement one... I know, that hasn't been done in at least 20 years,
+but we doing it.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### BubbleSort
+Yes, lets do bubble sort.  Usually the first algorithm in almost every major
+source is insertion sort, but I find it so boring!  Lets do bubble!
+
+As my teacher once said...
+
+To the whiteboard!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### So what's the running time?
+back to the whiteboard!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Depending on the time, we will implement this...
+To the typescript!  or to the next part!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
