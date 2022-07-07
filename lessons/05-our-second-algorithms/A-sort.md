@@ -82,3 +82,22 @@ To the typescript!  or to the next part!
 <br/>
 <br/>
 
+### There are other sorting strategies I want to talk about but...
+There is more sorting algorithms to deal with, and we will, but we haven't
+covered recursion, so we will hold off.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
