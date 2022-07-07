@@ -33,32 +33,10 @@ and they are layed out contiguously in memory.
 ### Third Algorithm: 2 Crystal Ball Problem
 
 ## Sort
-### First Algorithm
-* Insertion sort
+### Fourth Algorithm: Bubble Sort
 
 #### How do we measure how fast this is?
 * Time and Space
-
-### Second Algorithm
-* Merge Sort
-* Time and Space
-
-### Third Algorithm, Last Sort
-* Quick Sort
-* A fun challenge I had with quicksort and how we can remove the recursive
-  nature to it all.
-
-### Check Point
-* onto search!
-
-## Search
-* We have an unsorted array.  Does X exist?
-* Linear search is our option.
-
-### What if its sorted?
-* Linear search
-* Two Crystals
-* Binary Search
 
 ----------------------------------
 
@@ -112,6 +90,21 @@ having a queue's requirement for allocations.
 
 *Lets whiteboard* an ring buffer.
 * Go over adding, removing, and expanding the buffer
+
+----------------------------------
+
+### Second Algorithm
+* Merge Sort
+* Time and Space
+
+### Third Algorithm, Last Sort
+* Quick Sort
+* A fun challenge I had with quicksort and how we can remove the recursive
+  nature to it all.
+
+### Check Point
+* onto search!
+
 
 ### Questions?
 
