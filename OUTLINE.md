@@ -83,28 +83,6 @@ ArrayList
 * O(1) Access
 * Resizing is the issue.
 
-### From ArrayList to RingBuffer!
-One of my favorite structures of all time.  It is absolutely the greatest.  So
-what is a ring buffer?  In some sense, its a great way to have a queue without
-having a queue's requirement for allocations.
-
-*Lets whiteboard* an ring buffer.
-* Go over adding, removing, and expanding the buffer
-
-----------------------------------
-
-### Second Algorithm
-* Merge Sort
-* Time and Space
-
-### Third Algorithm, Last Sort
-* Quick Sort
-* A fun challenge I had with quicksort and how we can remove the recursive
-  nature to it all.
-
-### Check Point
-* onto search!
-
 
 ### Questions?
 
@@ -288,3 +266,11 @@ Adjacency Matrix
 
 (implementing?)
 I think we should just create one for sure
+
+-------------
+## WISH LIST
+
+### RingBuffer
+### Merge sort
+### Quicksort
+
