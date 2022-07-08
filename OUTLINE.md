@@ -33,35 +33,10 @@ part 2
 ---
 
 ## Recursion
-
-This is going to be its own section, though it really shouldn't be.
-
-Recursion isn't an algorithm or a data structure, its simply a technique of
-calling a function inside the function.  The easiest way of thinking of
-recursion is a by visually all recursion as the following.
-
-```typescript
-function foo(...) {
-    if (base_case) {
-        return ...
-    }
-
-    // potentially logic or conditions.
-    return foo(...);
-}
-```
-
-### the obvious problems
-* factorial
-* fibanoci
-
-You are probably thinking... why are not using a loop here?  This seems like a
-waste of time.  That is because it is and these are terrible examples of
-recursion.  Lets do a proper recursive example.
-
-* Maze solving.
-
+### Maze solving
 ### Questions?
+
+## Divide and Conquer
 
 ## Part 3: Trees
 Where are trees used?
