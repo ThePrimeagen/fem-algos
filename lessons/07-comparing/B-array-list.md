@@ -137,3 +137,22 @@ like to hear explained in one form or another.
 <br/>
 <br/>
 
+### There is a list structure that has great behaviors!
+RingBuffer...
+TODO Can i do this?
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+

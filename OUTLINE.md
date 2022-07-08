@@ -1,9 +1,4 @@
 ## Intro
-* blah blah blah something about me on twitch and yt and something like that.
-* Roadmap
-- how are we going to interweave content.  Algorithms / Data Structures
-* Why TypeScript?
-
 ## Algorithms: Lingo and Definitions
 * Time and Space complexity
 - light introduction.
@@ -17,76 +12,28 @@
 - where recursion is great
 
 ## Our first data structure set
-I am considering an Array to be our first data structure, because i assume
-most people don't even know what an array is.
-
 ### Array
-*White boarding only*
-
-You probably actually just thinking list.  An array is a specified sized array
-in which you can store elements.  Each type in that array takes up the space,
-and they are layed out contiguously in memory.
-
 ## Search
 ### First Algorithm: Linear Search
 ### Second Algorithm: Binary Search
 ### Third Algorithm: 2 Crystal Ball Problem
-
 ## Sort
 ### Fourth Algorithm: Bubble Sort
-
 #### How do we measure how fast this is?
-* Time and Space
-
-----------------------------------
-
-### Second Data Structure
+## Second Data Structure
 ### Linked Lists
-* Singly Linked
-* Doubly Linked
-* Implement each one in TS
-
 ### Flavors
-* LinkedList
-* Queue
-* Stack
-* Implement each one in TS
-
-### Comparing Array vs List (WHITEBOARD ONLY)
-Standard linked list.  How would we search?
-
-* Lets start with a LinkedList and lets search for 7.
-** Is there anything we can do to make this faster?
-** What if its sorted?
-
-Lists aren't great for searching.. huh.  Why is that?
-
+## Comparing Array vs List (WHITEBOARD ONLY)
 ### Compare
-What is a major difference we are seeing right now between list and array?
-
 ### ACCESS!!
-An array has O(1) access whereas linkedlist has O(n).  This is an important
-feature.
-
-* Starting with Array,
-How would we remove an element from the end?
-How would we remove an element from the beginning?
-Now compare this with a linked list!
-
 ### Can we get the best of both worlds? (WHITEBOARD ONLY)
-Lets create a wrapper class around array.
 
-ArrayList
+---
+part 2
+---
 
-* Weakness we still cannot remove from front easily.
-* Removing from end actually becomes pretty straight forward.
-* O(1) Access
-* Resizing is the issue.
+## Recursion
 
-
-### Questions?
-
-## Part 2 -- Recursion
 This is going to be its own section, though it really shouldn't be.
 
 Recursion isn't an algorithm or a data structure, its simply a technique of
