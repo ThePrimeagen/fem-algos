@@ -39,11 +39,6 @@ part 2
 ## Divide and Conquer
 
 ## Part 3: Trees
-Where are trees used?
-* Your filesystem is a tree
-* The dom is a tree
-* Trees are massively important in compilers.  You have probably mininumly
-  heard the term Abstract Syntax Tree.
 
 (whiteboard only)
 ### Think of lists
