@@ -49,6 +49,26 @@ ordering to the data within the data structure.
 <br/>
 <br/>
 
+### Lets write binary search!
+TEYEPEHSCRIPT
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
 ### Lets compare
 Binary search an array vs a tree?
 
