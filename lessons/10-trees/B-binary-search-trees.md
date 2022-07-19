@@ -67,3 +67,23 @@ Binary search an array vs a tree?
 <br/>
 <br/>
 
+### Balancing trees
+Lets talk about red black trees!  A way to balance binary search trees such
+that searching will remain O(h)
+(whiteboard)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
