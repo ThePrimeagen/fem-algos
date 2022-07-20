@@ -88,9 +88,9 @@ Binary search an array vs a tree?
 <br/>
 
 ### Balancing trees
-Lets talk about red black trees!  A way to balance binary search trees such
-that searching will remain O(h)
-(whiteboard)
+There are algorithms that can be used to make balanced trees, which improves
+the performance of a BST.  These algorithms are quite in-depth so therefore
+I'll be saving them for part two where we can deep dive into the complex algos.
 
 <br/>
 <br/>
