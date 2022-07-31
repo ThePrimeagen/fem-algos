@@ -3,28 +3,7 @@ title: "Your Third Algorithm"
 description: "The ride just got confusing!"
 ---
 
-## Interview Question Time
-This was a question to my first real job ever.  It involves an algorithm I happen to know :)
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-### The two crystal ball problem
-Little story time specifically about this algorithm!  Its known as the two
-crystal ball problem and is a super fun thought experiment.
-
+## The two crystal ball problem
 ```typescript
 // Given two crystal balls that will break if dropped for a high enough
 // distance, determine the exact spot in which it will break in the most
@@ -69,6 +48,26 @@ crystal ball problem and is a super fun thought experiment.
 
 ### Lets implement it!
 To the typescripts!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Fun side note
+* I have had this exact problem asked more than once as an interview question.
+* I have had to implement binary search over a google call in google docs more
+  than once.
 
 <br/>
 <br/>

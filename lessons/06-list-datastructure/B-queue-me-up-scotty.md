@@ -44,29 +44,29 @@ languages.
 <br/>
 <br/>
 
-### Lets implement!
-To the Typed JavaScripts
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
 ### Running Time
 (whiteboard)
 * enqueue
 * deque
 * peek
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Lets implement!
+To the Typed JavaScripts
 
 <br/>
 <br/>
@@ -108,6 +108,24 @@ whiteboard time!
 * push
 * pop
 * peek
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### If there is time
+lets impl!
 
 <br/>
 <br/>

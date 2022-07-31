@@ -10,6 +10,14 @@ not?
 
 <br/>
 <br/>
+
+### Next you are going to say HTML isn't a programming language
+* neovim is the only true editor
+* rust is the greatest language
+* linux is the only machine you should develop on
+
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
@@ -45,6 +53,7 @@ because... JavaScript.
 
 ### So what sucks about an Array?
 * Deletion (why?)
+* Insertion (why?)
 * Its ungrowable (why?)
 
 <br/>

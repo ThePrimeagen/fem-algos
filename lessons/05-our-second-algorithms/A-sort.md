@@ -4,9 +4,8 @@ description: "Our Second Algorithm set"
 ---
 
 ### Yes! Sorting!
-Yes, it wouldn't be an algorithm course without at least a couple sorts!  We
-will even implement one... I know, that hasn't been done in at least 20 years,
-but we doing it.
+Yes, it wouldn't be an algorithm course without at least a couple sorts!  I
+know... we will implement a sorting algorithm (actually 2 of them).
 
 <br/>
 <br/>
