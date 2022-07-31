@@ -3,10 +3,10 @@ title: "The Last Algorithms Class You Need"
 description: "The greatest experience by the greatest live coder ever"
 ---
 
-## I am back
-And I am going to whiteboard so hard today, and i hope you are ready for it.
-
-For me, whiteboarding algos is one of the best activities.
+## Data Structures & Algorithms
+I love this stuff.  This is some of the funnest stuff out there, and the best
+part is that learning the basics can really make a huge difference in your
+career.
 
 <br/>
 <br/>
@@ -44,16 +44,12 @@ For me, whiteboarding algos is one of the best activities.
 <br/>
 <br/>
 
-### Three things
-* Lots of companies still very much so use algos to judge problem solving
-  skills, and my guess this wont change much in the next 20 year.
+### Let me ask you this
+What data structure is used here (answer in your head)?
 
-* Do you even array, bro?
-  * `const arr = []` <--- NOT AN ARRAY
-
-* How does a JavaScript lists work?
-  * if you know the answer, don't say anything.
-  * We will observationally ascertain the correct ds under the hood.
+```typescript
+const a = [];
+```
 
 <br/>
 <br/>
@@ -70,6 +66,25 @@ For me, whiteboarding algos is one of the best activities.
 <br/>
 <br/>
 <br/>
+
+### If you answered array, you are wrong
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 
 ### Remember, Arrays are the simpliest Data Structure
 
@@ -110,15 +125,29 @@ For me, whiteboarding algos is one of the best activities.
 <br/>
 <br/>
 
-### The Languages we will use
-* Yes I did say languages...
-* C for talking about arrays
-* TS for the rest
+### Why TypeScript?
+* I do not like typescript for data structures, but I chose it to make this
+  class the most beginner friendly class.
 
-#### Why C though?
-Its truly the language that is best to learn datastructures in, but requires a
-done of precursor knowledge.  Memory layout is really important and its the
-easiest to observe in C (which is also why C is so hard).
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+TODO: Get link and image
+#### You can get intro'd into rust via
+[Introduction to Go & Rust](https://frontendmasters.com/courses/typescript-go-rust);
 
 <br/>
 <br/>

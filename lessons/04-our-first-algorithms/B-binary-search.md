@@ -3,7 +3,7 @@ title: "Your second Algorithm"
 description: "The ride just got faster!"
 ---
 
-### Yes, the second algorithm
+### A L G O R I T H M _ T I M E
 This second algorithm is a bit of a doosy, but its definitely a basis for other
 algorithms we will encounter.
 
@@ -59,24 +59,6 @@ First Whiteboard
 <br/>
 <br/>
 
-### Lets implement it
-To the typescripts!
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
 ### What is the Big O for Binary Search?
 (whiteboard time)
 
@@ -95,4 +77,23 @@ To the typescripts!
 <br/>
 <br/>
 
+
+
+### Lets implement it
+To the typescripts!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 

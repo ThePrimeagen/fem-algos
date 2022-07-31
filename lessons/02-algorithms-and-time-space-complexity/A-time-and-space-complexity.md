@@ -6,8 +6,11 @@ description: "This is not the final frontier"
 ### Time and Space
 Lets take the time to discuss time.
 
-(whiteboard)
-First, Let me draw up a bit of code
+<br/>
+<br/>
+
+Quick Definition of Big O.  It is a way to measure the space and time
+complexity of your algorithm.
 
 <br/>
 <br/>
@@ -25,7 +28,33 @@ First, Let me draw up a bit of code
 <br/>
 <br/>
 
-### For non video viewers
+### So when someone says Oh of N
+They literally mean your algorithm runs in linear time
+
+<br/>
+<br/>
+
+In other words, its a way to describe how your algorithm will perform in a
+general sense.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+First, Lets consider the following code.
 
 ```typescript
 function sum_char_codes(n: string): number {
@@ -38,6 +67,10 @@ function sum_char_codes(n: string): number {
 }
 ```
 
+### For those that know big o, this is easy
+But those who have never even classified a function, this may be a complete
+mystery.  That is fine.
+
 <br/>
 <br/>
 <br/>
@@ -54,13 +87,39 @@ function sum_char_codes(n: string): number {
 <br/>
 <br/>
 
-### What is time and space complexity?
-The simpliest way to put this its as your input grows, how fast does
-computation or memory grow?
+### First Lets define Space & Time
+* Space is how much memory your algorithm needs to run with respect to the input.
+* Time is how much cpu operations your algorithm needs to run with respect to the input.
 
-#### In the real world
-obviously memory growing is not computationally free, but in the matter of
-thinking about algorithms, we don't necessarily think about that.
+<br/>
+<br/>
+
+### With Respect To The Input
+^--- this is very important
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### To say it differently
+The simpliest way to put this its as your input grows, how fast does computation or memory grow?
+
+<br>
+
+### In the real world
+obviously memory growing is not computationally free, but in the matter of thinking about algorithms, we don't necessarily think about that.
 
 <br/>
 <br/>
@@ -79,31 +138,12 @@ thinking about algorithms, we don't necessarily think about that.
 <br/>
 
 ### How we measure complexity
-all complexity is always related to input.  So if a function takes in 1
-argument, then we can describe the complexity in terms of `N`.
+If all complexity is measured based on input, then where is the input used?
 
-Graphs, which have vertices (nodes) and edges are often described in `V` and
-`E`.  This will make more sense as time goes on.
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <br/>
 <br/>
 
 ### Lets go back to our example
-
-#### For non video viewers
 ```typescript
 function sum_char_codes(n: string): number {
     let sum = 0;
@@ -115,15 +155,11 @@ function sum_char_codes(n: string): number {
 }
 ```
 
-Its obvious to see that we have an `N` relationship.  But is that technically
-true?
+Me> It may or may not be obvious, but we have an `N` relationship.  `O(N)` time complexity
 
-Lets be real, adding to a number costs some computation, lets say 1 unit of
-computation.  calling `charCodeAt` costs 4 units of computation.  If that is
-the case, we really have a `5N` function (`(4 + 1) * len(n)`).
+<br>
 
-How come we don't specify it with the number at the end?  5N is bigger than N,
-right?
+You> How can you tell?
 
 <br/>
 <br/>
@@ -141,18 +177,52 @@ right?
 <br/>
 <br/>
 
-### What is Big Oh?
-This is because we use Big Oh notation, `O(N)` (pronounced Oh of N).  What BigO
-is specifically, besides for sounding like a gas station name, is the UPPER
-BOUNDS to the running time.  There are two things to consider.
+### Simplest trick for complexity
+Look for loops
 
-1. the constant, often denoted with `k` or `c` is REALLY hard to determine.
-1. in the end, the constant doesn't matter as much as the growth
+```typescript
+function sum_char_codes(n: string): number {
+    let sum = 0;
+    for (let i = 0; i < n.length; ++i) {
+        sum += n.charCodeAt(i);
+    }
 
-So common practice is to _discover_ the WORST CASE scenario and measure its
-scaling factor (relative to input).
+    return sum;
+}
+```
 
-### Lets do an example
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### What's the running time
+
+```typescript
+function sum_char_codes(n: string): number {
+    let sum = 0;
+    for (let i = 0; i < n.length; ++i) {
+        sum += n.charCodeAt(i);
+    }
+
+    for (let i = 0; i < n.length; ++i) {
+        sum += n.charCodeAt(i);
+    }
+
+    return sum;
+}
+```
 
 <br/>
 <br/>
@@ -170,7 +240,67 @@ scaling factor (relative to input).
 <br/>
 <br/>
 
-#### For non video viewers
+![It 2N?](./images/2n.jpg)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### In Big O
+We drop constants
+
+`O(2N)` -> `O(N)` and this makes sense.  That is because Big O is meant to
+describe the upper bound of the algorithm.  The constant eventually becomes
+irrelevant.
+
+<br/>
+<br/>
+
+Take the following:
+
+N = 1, O(10N) = 10, O(N^2) = 1
+
+<br/>
+
+N = 5, O(10N) = 50, O(N^2) = 25
+
+<br/>
+
+N = 100, O(10N) = 1,000, O(N^2) = 10,000
+
+<br/>
+
+N = 1000, O(10N) = 10,000, O(N^2) = 1,000,000
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Lets do another example
 ```typescript
 function sum_char_codes(n: string): number {
     let sum = 0;
@@ -188,21 +318,47 @@ function sum_char_codes(n: string): number {
 }
 ```
 
-### This is why we do worst case
-It is obvious that if we have a string starting with capital E, for those that
-don't know their char codes, that our function would only run 1 operation and
-return.  It is effectively constant.
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
-If the string has an E somewhere within, it is runtime would be `O(cN)`, where
-`c` is less than 1.
+### In BigO we consider the worst case
+E = 69
 
-If the string has no E, then we would simply say this function runs in `O(N)`.
-In typical complexity measurement, the best case has no need to cover.  In the
-real world though, you can make incredible improvements to time / space by
-these types of optimizations.
+Therefore any string with E in it will terminate early (unless E is the last item in the list).
 
-In other words, academic classification does not mean one is slower than
-another.
+ITS STILL `O(N)`
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Important note
+In the real world, this could be very important performance improvement, but in terms of academic pursuits, we just say `O(N)`
 
 <br/>
 <br/>
@@ -240,9 +396,42 @@ another.
 <br/>
 <br/>
 
-### One thing people forget about big o
-Big literally means the _UPPER BOUND_ running time.  Almost exclusively it also
-refers to the _WORST CASE_.
+### Some examples
+
+## O(N^2)
+```typescript
+function sum_char_codes(n: string): number {
+    let sum = 0;
+    for (let i = 0; i < n.length; ++i) {
+        for (let j = 0; j < n.length; ++j) {
+            sum += charCode;
+        }
+    }
+
+    return sum;
+}
+```
+
+## O(N^3)
+```typescript
+function sum_char_codes(n: string): number {
+    let sum = 0;
+    for (let i = 0; i < n.length; ++i) {
+        for (let j = 0; j < n.length; ++j) {
+            for (let k = 0; k < n.length; ++k) {
+                sum += charCode;
+            }
+        }
+    }
+    return sum;
+}
+```
+
+## O(n log n)
+* Quicksort (we will implement and explain)
+
+## O(log n)
+* Binary search trees
 
 <br/>
 <br/>
@@ -259,13 +448,34 @@ refers to the _WORST CASE_.
 <br/>
 <br/>
 <br/>
-
 
 ### Why so obviated?
 There are other resources out there to dive deep into big o notation.  And I
 just don't think we need Yet Another Big O explanation.  Instead I am going to
 focus on actively looking at running times and we will determine things
 together.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+TODO: SPELLING
+### Space the final Frontier
+We pretty much wont be going over space in this course.  The thing is, memory
+in algorithms is unfair.  Especially in TS.  The garbage collection throws a
+whole wrench into things.
 
 <br/>
 <br/>

@@ -3,6 +3,24 @@ title: "Your Third Algorithm"
 description: "The ride just got confusing!"
 ---
 
+## Interview Question Time
+This was a question to my first real job ever.  It involves an algorithm I happen to know :)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 ### The two crystal ball problem
 Little story time specifically about this algorithm!  Its known as the two
 crystal ball problem and is a super fun thought experiment.

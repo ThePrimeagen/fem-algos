@@ -61,7 +61,8 @@ Well by the end of this section we can empiracally tell what it is.
 <br/>
 
 ### So lets talk about arrays. (white board time)
-Covering:
+Covering:  Lets practice our O(N)!!
+
 * What are arrays
 * Getting at specific index
 * Insertion at specific index
@@ -82,12 +83,28 @@ Covering:
 <br/>
 <br/>
 
-### I am going to pretend
-That javascript actually has arrays.
+### Arrays
+They are fixed size, continiguous memory chunks
 
-#### Which means i need some conventions
-* I'll name every "array" with a leading `a`.  Yes I hate this, but i want it
-  to be obvious what i mean.
+* That means you cannot grow it
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### When applicable
+I will pretend that javascript actually has arrays.
 
 * I only have access to the `.length` property of an array.
   * no i wont go full c neckbeard and require length to be passed in.
@@ -126,7 +143,7 @@ That javascript actually has arrays.
 <br/>
 
 ### What's in the array?
-* and then there is one more question!  What is it?
+* not that question
 
 <br/>
 <br/>
