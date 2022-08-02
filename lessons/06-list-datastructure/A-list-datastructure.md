@@ -115,6 +115,7 @@ So how does it work? (whiteboard)
 <br/>
 
 ### Lets implement
+(time check :: this is a doozy to implement)
 First the API so we can all be on the same page.
 
 ```typescript

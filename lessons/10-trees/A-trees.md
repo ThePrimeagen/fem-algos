@@ -167,8 +167,9 @@ Lets create all three different traversals!
 <br/>
 
 ### These types of traversals are known as
-Depth First Search.  But that isn't the only * First search there is!  Breadth
-first search.
+Depth First Search.  But that isn't the only traversal there is!
+
+Breadth first search.
 (whiteboard)
 
 <br/>
