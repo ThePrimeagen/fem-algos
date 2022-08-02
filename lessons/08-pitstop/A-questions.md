@@ -23,6 +23,7 @@ Anything unclear?
 <br/>
 
 ### You can take a break when you are dead, lets get back to it!
+We are done with the Array/Lists section.  It feels good huh?
 
 <br/>
 <br/>

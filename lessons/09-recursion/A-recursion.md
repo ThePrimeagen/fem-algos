@@ -3,7 +3,26 @@ title: "Recursion"
 description: "The hardest part of DSA"
 ---
 
-### I honestly had the hardest time with this hurdle.
+## Recursion
+google gets it
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+### Recursion is hard, I struggled
 Do not feel bad if you are finding recursion hard.  We will try to go over as
 much as we can to make this as clear as possible.  I also promise you, once you
 understand it, it will become trivial.  Its such a weird feeling...
@@ -30,13 +49,13 @@ know and understand recursion.
 
 ```typescript
 // I always hated this example, but I think its the simplest
-function foo((n: number)n: number): number {
+function foo(n: number): number {
     // Base Case
     if (n === 1) {
         return 1;
     }
 
-    // Recurse step
+    // We shall Recurse!
     return n + foo(n - 1);
 }
 ```
@@ -100,6 +119,42 @@ I think its best to do something that we can understand, together.
 
 ### Lets program this out
 TO THE TIPSCRIPTS
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Hopefully you at least somewhat understand recursion better
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### When do I use recursion
+* its not able to be done via for loop
+* There is a base case.
 
 <br/>
 <br/>

@@ -1,3 +1,7 @@
+### POTENTIAL CHOPS
+DoublyLinkedList?
+ArrayList?
+
 ## Intro
 ## Algorithms: Lingo and Definitions
 * Time and Space complexity

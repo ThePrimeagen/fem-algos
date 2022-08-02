@@ -39,24 +39,6 @@ Lets talk about it on the whiteboard
 <br/>
 <br/>
 
-### Implementation!
-To the (neo and the one true)vim!
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
 ### Running Time
 * Insertion
 * Deletion
@@ -78,12 +60,8 @@ To the (neo and the one true)vim!
 <br/>
 <br/>
 
-### Lets Compare Against a LinkedList
-* Memory
-* Insertion
-* Deletion
-* Add
-* Get
+### Implementation!
+To the (neo and the one true)vim!
 
 <br/>
 <br/>
@@ -137,9 +115,29 @@ like to hear explained in one form or another.
 <br/>
 <br/>
 
-### There is a list structure that has great behaviors!
-RingBuffer...
-TODO Can i do this?
+### I think you have had enough...
+but there is one more list you should at least know about
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Ring Buffers
+This datastructure manages to make it into my professional and personal like at
+least 10 times.  Very useful.
+
+Lets whiteboard the behavior out.
 
 <br/>
 <br/>

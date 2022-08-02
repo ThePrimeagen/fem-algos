@@ -43,7 +43,7 @@ Lets contrast these
 <br/>
 
 ### Can we do better?
-* Is there a best of both worlds?
+* Can we have an array access with the ability to grow?
 
 <br/>
 <br/>
@@ -60,7 +60,7 @@ Lets contrast these
 <br/>
 <br/>
 
-### Sort of!
+### Yes!
 
 <br/>
 <br/>

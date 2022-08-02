@@ -22,6 +22,24 @@ an incredibly simple and impressive algorithm.
 <br/>
 <br/>
 
+### What is Divide and Conque?
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
 ### First, we draw it
 TO THE WALTERWHITEBOARD!
 
