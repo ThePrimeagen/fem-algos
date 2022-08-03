@@ -41,11 +41,51 @@ know they work.
 <br/>
 <br/>
 
+### Terms
+load factor:  The amount of data points vs the amount of storage (`data.len / storage.capacity`)
+key: a value that is hashable and is used to look up data
+value: a value that is retrievable in O(1) time
+collision: when 2 keys map to the same cell.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
 ### Lets whiteboard what is happening
 * Insertion
 * Deletion
 * Collisions
 * Running Time
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Depending on the Time
+Lets implement one!
 
 <br/>
 <br/>

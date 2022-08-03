@@ -68,6 +68,7 @@ acyclic: A graph that contains no cycles
 connected: When every node has a path to another node
 directed: When there is a direction to the connections.  Think Twitter
 undirected: !directed.  Think Facebook (i haven't been on in 10 years, it may have changed)
+weighted: The edges have a weight associated with them.  Think Maps
 dag: Directed, acyclic graph.
 
 #### Implementation Terms
@@ -97,8 +98,7 @@ every edge
 <br/>
 <br/>
 
-### Lets go over graphs just in general
-* basics of graph
+### How are graphs represented
 * adj list
 * adj matrix
 (whiteboard)
@@ -173,8 +173,28 @@ BFS and DFS still exist on a graph, but it looks different now.
 <br/>
 
 ### Dijkstra's Shortest Path
-Probably one of the first algorithms most people encounter when it comes to
-learning about graphs.
+* what is it?
+* where is it used?
+* variations of it
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+# Probably your first graph algo after BFS/DFS
+* don't forget to say non negative weights
+
 (whiteboard)
 * running time
 

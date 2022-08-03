@@ -188,7 +188,6 @@ Breadth first search.
 <br/>
 
 ### Lets implement
-* dfs (in order)
 * bfs
 
 <br/>
