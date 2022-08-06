@@ -3,10 +3,8 @@ title: "The Last Algorithms Class You Need"
 description: "The greatest experience by the greatest live coder ever"
 ---
 
-## Data Structures & Algorithms
-I love this stuff.  This is some of the funnest stuff out there, and the best
-part is that learning the basics can really make a huge difference in your
-career.
+## The Last course you will ever need?
+That seems a bit much, huh?
 
 <br/>
 <br/>
@@ -23,6 +21,26 @@ career.
 <br/>
 <br/>
 <br/>
+
+## These are the algorithms I have ran into
+Plus other ones.  My goal is foundation.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 
 ## Why should I care about algorithms?
 * Isn't asking algorithms old fashion for interviews?
@@ -67,7 +85,7 @@ const a = [];
 <br/>
 <br/>
 
-### If you answered array, you are wrong
+![What if I told you](./images/morphius.jpg)
 
 <br/>
 <br/>
@@ -167,6 +185,7 @@ TODO: Get link and image
 
 ### Who Am I?
 * I am CEO of TheStartup
+// TODO: Put in image of try harder
 * I rant [https://youtube.com/ThePrimeagen](https://youtube.com/ThePrimeagen)
 * I scream while coding [https://twitch.tv/ThePrimeagen](https://twitch.tv/ThePrimeagen)
 * I shit post [https://twitter.com/ThePrimeagen](https://twitter.com/ThePrimeagen)

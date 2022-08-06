@@ -89,13 +89,32 @@ mystery.  That is fine.
 
 ### First Lets define Space & Time
 * Space is how much memory your algorithm needs to run with respect to the input.
-* Time is how much cpu operations your algorithm needs to run with respect to the input.
+* Time is how much time your algorithm needs to run with respect to the input.
 
 <br/>
 <br/>
 
 ### With Respect To The Input
 ^--- this is very important
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Important concepts
+1) growth is with respect to the input
 
 <br/>
 <br/>
@@ -300,6 +319,45 @@ N = 1000, O(10N) = 10,000, O(N^2) = 1,000,000
 <br/>
 <br/>
 
+### There is practical vs theoretical differences
+Just because N is faster than N^2, doesn't mean practically its always faster
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Important concepts
+1) growth is with respect to the input
+2) Constants are dropped
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 ### Lets do another example
 ```typescript
 function sum_char_codes(n: string): number {
@@ -334,7 +392,7 @@ function sum_char_codes(n: string): number {
 <br/>
 <br/>
 
-### In BigO we consider the worst case
+### In BigO we often consider the worst case
 E = 69
 
 Therefore any string with E in it will terminate early (unless E is the last item in the list).
@@ -357,8 +415,10 @@ ITS STILL `O(N)`
 <br/>
 <br/>
 
-### Important note
-In the real world, this could be very important performance improvement, but in terms of academic pursuits, we just say `O(N)`
+### Important concepts
+1) growth is with respect to the input
+2) Constants are dropped
+3) Worst case is _usually_ the way we measure
 
 <br/>
 <br/>
@@ -449,11 +509,38 @@ function sum_char_codes(n: string): number {
 <br/>
 <br/>
 
-### Why so obviated?
+### There is one time that we will see today, that hasn't been mentioned
+O(sqrt(n))
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+## Why so obviated?
 There are other resources out there to dive deep into big o notation.  And I
 just don't think we need Yet Another Big O explanation.  Instead I am going to
 focus on actively looking at running times and we will determine things
 together.
+
+<br>
+
+### Important concepts
+1) growth is with respect to the input
+2) Constants are dropped
+3) Worst case is _usually_ the way we measure
+
 
 <br/>
 <br/>
@@ -476,6 +563,25 @@ TODO: SPELLING
 We pretty much wont be going over space in this course.  The thing is, memory
 in algorithms is unfair.  Especially in TS.  The garbage collection throws a
 whole wrench into things.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Before we go
+Questions?
 
 <br/>
 <br/>

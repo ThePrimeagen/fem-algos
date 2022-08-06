@@ -3,10 +3,9 @@ title: "Queue time"
 description: "Queue me up scotty!"
 ---
 
-### LinkedLists are the foundation
-There are two data structures, one could argue that they are algorithms more
-than data structures, that are implemented on top of linked lists.  Lets go
-over each.
+### Why start with LinkedLists?
+They are so foundational to programming concepts when it comes to DSA.
+Understanding them will help you with trees, with graphs, etc etc.
 
 <br/>
 <br/>
@@ -22,6 +21,26 @@ over each.
 <br/>
 <br/>
 <br/>
+
+### Is it a Data Structure or Algorithm?
+Well... now we get into philosophy.  Is what we are going to see next an
+algorithm on a linked list or is it its own data structure?
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 
 ### Queue
 This is probably the most common data structure that i have implemented in many
@@ -65,6 +84,25 @@ languages.
 <br/>
 <br/>
 
+### We entering a world of DSA where constraints make things fast
+You will notice pretty much from here on out that what makes a lot of these
+datastructures fast is the lack of features.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 ### Lets implement!
 To the Typed JavaScripts
 
@@ -83,7 +121,7 @@ To the Typed JavaScripts
 <br/>
 <br/>
 
-### Stack
+### What's the opposite of a Queue?
 Oddly enough, i have also created these A LOT when doing performance things.
 
 whiteboard time!
@@ -108,6 +146,24 @@ whiteboard time!
 * push
 * pop
 * peek
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Constraints are great!
+Again, notice the constraint made it fast
 
 <br/>
 <br/>

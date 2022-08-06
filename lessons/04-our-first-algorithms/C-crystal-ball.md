@@ -5,7 +5,7 @@ description: "The ride just got confusing!"
 
 ## The two crystal ball problem
 ```typescript
-// Given two crystal balls that will break if dropped for a high enough
+// Given two crystal balls that will break if dropped from high enough
 // distance, determine the exact spot in which it will break in the most
 // optimized way.
 ```
@@ -29,7 +29,6 @@ description: "The ride just got confusing!"
 (whiteboard)
 * Linear
 * Binary
-* (The actual answer)
 
 <br/>
 <br/>
@@ -45,8 +44,28 @@ description: "The ride just got confusing!"
 <br/>
 <br/>
 <br/>
+
+### Umm...? what?
+You told me...
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 
 ### Lets implement it!
+timecheck: (should be done before lunch)
 To the typescripts!
 
 <br/>

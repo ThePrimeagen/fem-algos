@@ -4,7 +4,16 @@ description: "The ride just got better!"
 ---
 
 ## Algorithms
-Our first algorithms.... OH I AM SO EXCITED
+The A in DSA
+
+<br>
+<br>
+
+### When applicable
+I will pretend that javascript actually has arrays.
+
+* I only have access to the `.length` property of an array.
+  * no i wont go full c neckbeard and require length to be passed in.
 
 <br/>
 <br/>
@@ -18,12 +27,6 @@ Our first algorithms.... OH I AM SO EXCITED
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-
-We are entering into the A of DSA!  A lot of the algorithms will first be
-described on the whiteboard and then translated into code.
-
 <br/>
 <br/>
 
@@ -86,6 +89,14 @@ As I said, lets whiteboard this.
 ### What's the Big O?
 Lets ask this question always before we proceed
 
+<br>
+<br>
+
+### Important concepts
+1) growth is with respect to the input
+2) Constants are dropped
+3) Worst case is _usually_ the way we measure
+
 <br/>
 <br/>
 <br/>
@@ -104,11 +115,11 @@ Lets ask this question always before we proceed
 ### Lets implement it
 To follow along i recommend using my kata typescript library
 
-[Kata](https://github.com/ThePrimeagen/lig-machine)
+[Kata](https://github.com/ThePrimeagen/kata-machine)
 
 ```
-git clone git@github.com:ThePrimeagen/lig-machine.git
-cd lig-machine
+git clone git@github.com:ThePrimeagen/kata-machine.git
+cd kata-machine
 yarn install
 yarn generate
 vim $(yarn -s day) # or navigate to day1 folder

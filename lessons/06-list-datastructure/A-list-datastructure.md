@@ -3,6 +3,24 @@ title: "List DataStructures"
 description: "So many lists!"
 ---
 
+## The second datastructure!
+This should be a time filled with exuberance!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 ### I said something weird earlier.
 I said that JavaScript arrays, `const a = [];` is not an array.  We know have a
 solid definition of an array, is it an array (yes someone answer)?  And why
@@ -115,7 +133,7 @@ So how does it work? (whiteboard)
 <br/>
 
 ### Lets implement
-(time check :: this is a doozy to implement)
+(time check :: this is a doozy to implement, singly linked for time crunch)
 First the API so we can all be on the same page.
 
 ```typescript

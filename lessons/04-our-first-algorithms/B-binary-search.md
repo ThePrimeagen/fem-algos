@@ -40,7 +40,7 @@ Lets say it is this time. So how can we search this array?
 <br/>
 <br/>
 
-### Binary Search over an Array.  The only algorithm to be off by 1 every time.
+### First, lets come up with our own algorithm together
 First Try?
 First Whiteboard
 
@@ -59,7 +59,25 @@ First Whiteboard
 <br/>
 <br/>
 
-### What is the Big O for Binary Search?
+### So its still N... Perhaps we can jump differently?
+(back to the whiteboard)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### What is the Big O this algorithm?
 (whiteboard time)
 
 <br/>
@@ -77,10 +95,28 @@ First Whiteboard
 <br/>
 <br/>
 
+### This is Binary Search
+One of the greatest algos ever!
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 ### Lets implement it
 To the typescripts!
+
+* dont forget to divide by 2
 
 <br/>
 <br/>

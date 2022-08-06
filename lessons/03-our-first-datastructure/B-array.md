@@ -4,7 +4,7 @@ description: "Yes, boring arrays..."
 ---
 
 ### Array
-Yes.  Array.  I know you are all thinking... but i know this.
+Yes.  Array.  I know you are all thinking... "but i know this."
 
 <br/>
 <br/>
@@ -22,9 +22,9 @@ Yes.  Array.  I know you are all thinking... but i know this.
 <br/>
 <br/>
 
-![What if I told you](./images/morphius.jpg)
+### Well... you also said const a = []
+hurts. sorry.
 
-<br/>
 <br/>
 <br/>
 <br/>
@@ -44,6 +44,24 @@ Yes.  Array.  I know you are all thinking... but i know this.
 // TODO: Spelling
 ### So what is it?
 Well by the end of this section we can empiracally tell what it is.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Lets first just play with arrays.
+To the node!
 
 <br/>
 <br/>
@@ -103,11 +121,8 @@ They are fixed size, continiguous memory chunks
 <br/>
 <br/>
 
-### When applicable
-I will pretend that javascript actually has arrays.
-
-* I only have access to the `.length` property of an array.
-  * no i wont go full c neckbeard and require length to be passed in.
+### Questions?
+Any questions at this moment?  We have pretty much covered _what an array is_.
 
 <br/>
 <br/>
