@@ -4,7 +4,8 @@ description: "This is pretty cool"
 ---
 
 ### This a pretty cool DS
-This combines the idea of an array with the ability to grow it.
+This combines the idea of an array with the ability to grow it.  Adheres to the
+list interface.
 
 <br/>
 <br/>
@@ -40,10 +41,10 @@ Lets talk about it on the whiteboard
 <br/>
 
 ### Running Time
-* Insertion
-* Deletion
-* Add
 * Get
+* Deletion/Insertion at beginning of list
+* Deletion/Insertion in the middle
+* Deletion/Insertion at end of list
 
 <br/>
 <br/>
@@ -61,6 +62,7 @@ Lets talk about it on the whiteboard
 <br/>
 
 ### Implementation!
+(timecheck: day1, afternoon)
 To the (neo and the one true)vim!
 
 <br/>
@@ -79,6 +81,8 @@ To the (neo and the one true)vim!
 <br/>
 
 ### Which one is better?
+* if you haven't made the observation yet, ArrayLists operate best when treated
+  like a stack
 
 <br/>
 <br/>
@@ -95,10 +99,11 @@ To the (neo and the one true)vim!
 <br/>
 <br/>
 
-### ITS ALWAYS THE SAME ANSWER
-(your answer should be it depends)
+## Interview tip
+(your answer should always be it depends)
 When I am interviewing less experienced individuals, this is something I really
-like to hear explained in one form or another.
+like to hear explained in one form or another.  Why would you use one thing over
+another.
 
 <br/>
 <br/>
@@ -134,8 +139,7 @@ but there is one more list you should at least know about
 <br/>
 
 ### Ring Buffers
-This datastructure manages to make it into my professional and personal like at
-least 10 times.  Very useful.
+I have literally created at least 10 of these this year...
 
 Lets whiteboard the behavior out.
 

@@ -3,9 +3,14 @@ title: "Divide and Conquer"
 description: "Conquer, hard word to spell"
 ---
 
-### This is ackshually the last of the list items.
+### This is ackshually the last of the "Array" section
 To help understand divide and conquer we are going to implement QuickSort.  Its
 an incredibly simple and impressive algorithm.
+
+<br/>
+<br/>
+
+You may have forgot, but I did say we have 2 sorts to do.
 
 <br/>
 <br/>
@@ -40,8 +45,46 @@ an incredibly simple and impressive algorithm.
 <br/>
 
 
-### First, we draw it
-TO THE WALTERWHITEBOARD!
+### First, Lets go over the QuickSort Algorithm
+This truly is a fun algorithm to implement
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### MIT Battlecode
+A group of us got 13th at MIT battle code and one of the algorithms we had to
+use was quicksort
+(i did not go to MIT)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Running Time?
+(to the whiteboard)
 
 <br/>
 <br/>

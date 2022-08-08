@@ -3,8 +3,19 @@ title: "What is [] in javascript?"
 description: "its time to find out!"
 ---
 
-### Lets empiracally test it!
-my favorite!
+### Time for the empirical test
+Its so great!
+
+<br/>
+<br/>
+
+Lets find out under the hood what type of data structure is being used with
+`const a = []`.
+
+<br/>
+<br/>
+
+Before we start, any guesses?
 
 <br/>
 <br/>

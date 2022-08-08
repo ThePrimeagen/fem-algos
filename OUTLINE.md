@@ -4,17 +4,6 @@ ArrayList?
 
 ## Intro
 ## Algorithms: Lingo and Definitions
-* Time and Space complexity
-- light introduction.
-- big O notation.
- * we mostly talk about worst case scenarios
-- explain constant, logn, n, nlogn, n^2, k^n, !n
-* Recursion
-- perhaps one of the hardest hurdles in all programming to get over.
-- perhaps one of the most useful programming concepts.
-- simple examples of recursion
-- where recursion is great
-
 ## Our first data structure set
 ### Array
 ## Search
@@ -30,7 +19,7 @@ ArrayList?
 ## Comparing Array vs List (WHITEBOARD ONLY)
 ### Compare
 ### ACCESS!!
-### Can we get the best of both worlds? (WHITEBOARD ONLY)
+### One more list!
 
 ---
 part 2

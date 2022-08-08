@@ -61,6 +61,8 @@ Lets contrast these
 <br/>
 
 ### Yes!
+if you remember from the array section I did say we have the ability to write
+in list operations using an array.
 
 <br/>
 <br/>

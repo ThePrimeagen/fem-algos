@@ -22,8 +22,8 @@ Anything unclear?
 <br/>
 <br/>
 
-### You can take a break when you are dead, lets get back to it!
-We are done with the Array/Lists section.  It feels good huh?
+### You can take a break when you are dead
+The next sections are very exciting
 
 <br/>
 <br/>

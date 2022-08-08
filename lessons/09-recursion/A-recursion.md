@@ -21,6 +21,25 @@ google gets it
 <br/>
 <br/>
 
+## What is Recursion?
+The simplest way to think of recursion is a function that calls itself until
+the problem is solved.  This usually involves what is referred to as a "base
+case."  A base case is the point in which the problem is solved at.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 ### Recursion is hard, I struggled
 Do not feel bad if you are finding recursion hard.  We will try to go over as
@@ -45,7 +64,7 @@ know and understand recursion.
 <br/>
 <br/>
 
-### To put it as simple as possible
+### The simplest example
 
 ```typescript
 // I always hated this example, but I think its the simplest
@@ -60,28 +79,54 @@ function foo(n: number): number {
 }
 ```
 
-There are two steps generally in recursion.
+Lets draw what is happening here
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+## Questions?
+I want to make sure we are clear here first.  I want to make sure we are clear
+here first, as I said, the rest of this class is going to be heavy on
+recursion.
+
+<br/>
+<br/>
+
+Its ok if you don't quite get it yet, this example never helped me.  But it is
+also the simplest way to display recursion.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+### The two steps of recursion
 * The Base Case: This is the thing that makes you leave the recursion (no more
   calling the same function again).
 * The Recursion: This step we will call ourselves again to help solve the question
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-### Lets whiteboard this out
-(whiteboard)
 
 <br/>
 <br/>
@@ -154,7 +199,6 @@ TO THE TIPSCRIPTS
 
 ### When do I use recursion
 * its not able to be done via for loop
-* There is a base case.
 
 <br/>
 <br/>
