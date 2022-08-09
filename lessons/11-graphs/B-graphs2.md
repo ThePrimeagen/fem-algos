@@ -1,6 +1,6 @@
 ---
-title: "Graphs"
-description: "So much here"
+title: "Graphs Part 2"
+description: "So much here we cannot even do it"
 ---
 
 That is all we will be covering on graphs in this course.  We will do some

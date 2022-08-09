@@ -42,8 +42,9 @@ it on the whiteboard!
 <br/>
 <br/>
 
-### Lets implement one!
-(if time permits) This should be a relatively easy implementation!
+### Lets not implement one!
+I like using the whiteboard from time to time because i don't have to prove
+that I write amazing code all the time.
 
 <br/>
 <br/>
