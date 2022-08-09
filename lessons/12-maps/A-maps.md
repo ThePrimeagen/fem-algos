@@ -42,10 +42,10 @@ know they work.
 <br/>
 
 ### Terms
-load factor:  The amount of data points vs the amount of storage (`data.len / storage.capacity`)
-key: a value that is hashable and is used to look up data
-value: a value that is retrievable in O(1) time
-collision: when 2 keys map to the same cell.
+load factor:  The amount of data points vs the amount of storage (`data.len / storage.capacity`)<br/>
+key: a value that is hashable and is used to look up data<br/>
+value: a value that is retrievable in O(1) time<br/>
+collision: when 2 keys map to the same cell.<br/>
 
 <br/>
 <br/>

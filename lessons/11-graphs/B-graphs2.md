@@ -21,3 +21,20 @@ significant leg work on the follow up to this course, part 2.  Stay tuned.
 <br/>
 <br/>
 
+### Any questions while we are here?
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
