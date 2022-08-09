@@ -84,3 +84,21 @@ Lets implement it!
 <br/>
 <br/>
 
+### Print the contents of the arrays as we pop / push
+This is javascript, I think you will see a couple problems...
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+

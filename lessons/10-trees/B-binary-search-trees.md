@@ -50,7 +50,7 @@ ordering to the data within the data structure.
 <br/>
 
 ### Lets write binary search!
-TEYEPEHSCRIPT
+* Just the search part (its super easy)
 
 <br/>
 <br/>
@@ -66,11 +66,11 @@ TEYEPEHSCRIPT
 <br/>
 <br/>
 <br/>
-
-
 
 ### Lets compare
 Binary search an array vs a tree?
+
+* What feels easier to implement?
 
 <br/>
 <br/>
