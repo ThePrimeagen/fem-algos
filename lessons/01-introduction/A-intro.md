@@ -23,7 +23,7 @@ That seems a bit much, huh?
 <br/>
 
 ## These are the algorithms I have ran into
-Plus other ones.  My goal is foundation.
+My goal is foundation.
 
 <br/>
 <br/>
@@ -185,10 +185,11 @@ TODO: Get link and image
 
 ### Who Am I?
 * I am CEO of TheStartup
-// TODO: Put in image of try harder
+![TheStartup](./images/TheStartup.jpeg)
 * I rant [https://youtube.com/ThePrimeagen](https://youtube.com/ThePrimeagen)
 * I scream while coding [https://twitch.tv/ThePrimeagen](https://twitch.tv/ThePrimeagen)
 * I shit post [https://twitter.com/ThePrimeagen](https://twitter.com/ThePrimeagen)
+![Shit Post](./images/twitter.png)
 
 <br/>
 <br/>
