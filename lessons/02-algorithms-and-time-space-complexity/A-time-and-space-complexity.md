@@ -9,8 +9,8 @@ Lets take the time to discuss time.
 <br/>
 <br/>
 
-Quick Definition of Big O.  It is a way to measure the space and time
-complexity of your algorithm.
+Time and Space is measured in something called big-oh (often referred to as O
+of (time/space complexity)).
 
 <br/>
 <br/>
@@ -94,8 +94,8 @@ mystery.  That is fine.
 <br/>
 <br/>
 
-### With Respect To The Input
-^--- this is very important
+### To say it differently
+As your input grows, how fast does computation or memory grow?
 
 <br/>
 <br/>
@@ -131,11 +131,6 @@ mystery.  That is fine.
 <br/>
 <br/>
 <br/>
-
-### To say it differently
-The simpliest way to put this its as your input grows, how fast does computation or memory grow?
-
-<br>
 
 ### In the real world
 obviously memory growing is not computationally free, but in the matter of thinking about algorithms, we don't necessarily think about that.
@@ -534,13 +529,21 @@ just don't think we need Yet Another Big O explanation.  Instead I am going to
 focus on actively looking at running times and we will determine things
 together.
 
-<br>
+<br/>
+<br/>
 
 ### Important concepts
 1) growth is with respect to the input
 2) Constants are dropped
 3) Worst case is _usually_ the way we measure
 
+<br/>
+<br/>
+
+### One more note
+Big O.  What is it?  Well, there is technically a bunch of different ways to
+measure the complexity of algorithms, but in general the easiest one to use is
+the "Upper Bound"
 
 <br/>
 <br/>
@@ -558,8 +561,7 @@ together.
 <br/>
 <br/>
 
-TODO: SPELLING
-### Space the final Frontier
+### Space the Final Frontier
 We pretty much wont be going over space in this course.  The thing is, memory
 in algorithms is unfair.  Especially in TS.  The garbage collection throws a
 whole wrench into things.

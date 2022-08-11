@@ -41,9 +41,8 @@ hurts. sorry.
 <br/>
 <br/>
 
-// TODO: Spelling
 ### So what is it?
-Well by the end of this section we can empiracally tell what it is.
+Well by the end of this section we can empirically tell what it is.
 
 <br/>
 <br/>
@@ -61,7 +60,8 @@ Well by the end of this section we can empiracally tell what it is.
 <br/>
 
 ### Lets first just play with arrays.
-To the node!
+First a moment on the whiteboard.
+Then to the node!
 
 <br/>
 <br/>
@@ -79,7 +79,7 @@ To the node!
 <br/>
 
 ### So lets talk about arrays. (white board time)
-Covering:  Lets practice our O(N)!!
+Covering:  Lets practice our BigO!!!
 
 * What are arrays
 * Getting at specific index
