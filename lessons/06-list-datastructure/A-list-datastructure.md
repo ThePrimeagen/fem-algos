@@ -132,9 +132,8 @@ So how does it work? (whiteboard)
 <br/>
 <br/>
 
-### Lets implement
-(time check :: this is a doozy to implement, singly linked for time crunch)
-First the API so we can all be on the same page.
+### We wont implement unless we have lots of time
+But here is the api
 
 ```typescript
 interface LinkedList<T> {

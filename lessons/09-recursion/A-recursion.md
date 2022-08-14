@@ -80,6 +80,7 @@ function foo(n: number): number {
 ```
 
 Lets draw what is happening here
+* don't forget to describe the 2 steps to recursion
 
 <br/>
 <br/>
@@ -122,11 +123,8 @@ also the simplest way to display recursion.
 <br/>
 <br/>
 
-
-### The two steps of recursion
-* The Base Case: This is the thing that makes you leave the recursion (no more
-  calling the same function again).
-* The Recursion: This step we will call ourselves again to help solve the question
+### The biggest mistake of recursion
+Don't put it into the 2 steps.  1. Base Case, 2. Recurse
 
 <br/>
 <br/>
@@ -146,24 +144,7 @@ also the simplest way to display recursion.
 ### Lets work through a problem that helped me understand recursion
 I think its best to do something that we can understand, together.
 (to the whiteboard)
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-### Lets program this out
-TO THE TIPSCRIPTS
+(program a bit and white board a bit)
 
 <br/>
 <br/>

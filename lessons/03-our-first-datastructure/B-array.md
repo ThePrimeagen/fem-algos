@@ -142,42 +142,6 @@ Any questions at this moment?  We have pretty much covered _what an array is_.
 <br/>
 
 ### Searching for a value?
-* There is an obvious question you should be asking.
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-### What's in the array?
-* not that question
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-### Is it ordered?
 
 <br/>
 <br/>

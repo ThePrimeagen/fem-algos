@@ -59,26 +59,8 @@ First Whiteboard
 <br/>
 <br/>
 
-### So its still N... Perhaps we can jump differently?
-(back to the whiteboard)
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-### What is the Big O this algorithm?
-(whiteboard time)
+### Another Big O trick
+If the input halves at each step, its likely O(LogN) or O(NlogN)
 
 <br/>
 <br/>
@@ -117,6 +99,23 @@ One of the greatest algos ever!
 To the typescripts!
 
 * dont forget to divide by 2
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Questions?
 
 <br/>
 <br/>

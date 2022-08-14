@@ -100,7 +100,13 @@ binary tree - a tree in which has at most 2 children, at least 0 children <br/>
 general tree - a tree with 0 or more children <br/>
 binary search tree - a tree in which has a specific ordering to the nodes and at most 2 children <br/>
 leaves - a node without children <br/>
-balanced - A tree is _perfectly_ balanced when any node's left and right children have the same height.
+balanced - A tree is _perfectly_ balanced when any node's left and right children have the same height. <br/>
+branching factor - the amount of children a tree has. <br/>
+
+ <br/> <br/>
+
+Hopefully this makes "seeing" quicksort start to make more sense... Its just a structure.
+
 
 <br/>
 <br/>

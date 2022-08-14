@@ -100,3 +100,21 @@ covered recursion, so we will hold off.
 <br/>
 <br/>
 
+### Questions?
+* Only one time have i ever had to implement a sorting algorithm.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+

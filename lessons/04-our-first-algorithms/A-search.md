@@ -49,9 +49,7 @@ competency that will follow you for life.
 <br/>
 <br/>
 
-### Is it ordered?
-So this is an extremely important question to be asked.  Is the array ordered?
-If it is, we have options that we don't have if its unordered.
+### Our first search!
 
 <br/>
 <br/>
