@@ -25,14 +25,15 @@ Time and Space.  Big O as they call it.
 ## What is Big O
 Big O is a way to categorize your algorithms time or memory requirements based
 on input.  It is not meant to be an exact measurement.  It will not tell you
-how many CPU cycles it takes, instead it is meant to generalize.
+how many CPU cycles it takes, instead it is meant to generalize the growth of
+your algorithm.
 
 <br/>
 <br/>
 
 ### Example
-So when someone says Oh of N, they literally mean your algorithm runs in linear
-time
+So when someone says Oh of N, they mean your algorithm will grow linearily
+based on input.
 
 <br/>
 <br/>
@@ -146,7 +147,8 @@ program for cleanup.
 <br/>
 
 ### Lets go back to our example
-Lets look at input.  How does our program's time grow with respect to input?
+Lets look at input.  How does our program's execution time grow with respect to
+input?
 
 ```typescript
 function sum_char_codes(n: string): number {
@@ -197,9 +199,6 @@ function sum_char_codes(n: string): number {
     return sum;
 }
 ```
-
-// think quik math
-We would call this function O of N, or written as O(N)
 
 <br/>
 <br/>
@@ -274,8 +273,8 @@ function sum_char_codes(n: string): number {
 2) Constants are dropped
 
 `O(2N)` -> `O(N)` and this makes sense.  That is because Big O is meant to
-describe the upper bound of the algorithm.  The constant eventually becomes
-irrelevant.
+describe the upper bound of the algorithm (the growth of the algorithm).  The
+constant eventually becomes irrelevant.
 
 <br/>
 <br/>
@@ -377,11 +376,14 @@ function sum_char_codes(n: string): number {
 <br/>
 
 ### In BigO we often consider the worst case
-E = 69
+Especially in interviews (i have never been asked for best, average, and worst
+case, just worst case). <br/>
 
-Therefore any string with E in it will terminate early (unless E is the last item in the list).
+E = 69 <br/>
 
-ITS STILL `O(N)`
+Therefore any string with E in it will terminate early (unless E is the last item in the list). <br/>
+
+ITS STILL `O(N)` <br/>
 
 <br/>
 <br/>
@@ -402,7 +404,7 @@ ITS STILL `O(N)`
 ### Important concepts
 1) growth is with respect to the input
 2) Constants are dropped
-3) Worst case is _usually_ the way we measure
+3) Worst case is _usually_ the way we measure,
 
 <br/>
 <br/>
@@ -551,9 +553,16 @@ easiest one to use is the "Upper Bound"
 <br/>
 
 ### Space the Final Frontier
-We pretty much wont be going over space in this course.  The thing is, memory
-in algorithms is unfair.  Especially in TS.  The garbage collection throws a
-whole wrench into things.
+We pretty much wont be going over space in this course.  Just not something we
+will be discussing.  I find this less consequetial in daily life considering I
+see things like this.
+
+```typescript
+// or whatever it is in react
+// O(N) time + O(N) space!  COUNT ME IN
+return <Component
+            ...props />
+```
 
 <br/>
 <br/>

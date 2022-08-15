@@ -163,9 +163,9 @@ const a = [];
 <br/>
 <br/>
 
-TODO: Get link and image
 #### You can get intro'd into rust via
-[Introduction to Go & Rust](https://frontendmasters.com/courses/typescript-go-rust);
+[Introduction to Go & Rust](https://frontendmasters.com/courses/typescript-go-rust)
+![Introduction to Go & Rust](./images/poly.png)
 
 <br/>
 <br/>
@@ -236,31 +236,39 @@ lab, which was expected to spend 5 hours preparing for.
 <br/>
 <br/>
 
-So that means this class is meant to represent what would typically take 3 * 15
-+ 15 * 5 hours worth of work, or 120 hours.  But I have less than 16, including
+So that means this class is meant to represent what would typically take 3 * 45
++ 15 * 5 hours worth of work, or 225 hours.  But I have less than 16, including
 lunch breaks.
 
 <br/>
 <br/>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+So to get the most out of this class, spend some time doing this yourself.
+There are great books and resources you can use.
+
 <br/>
 <br/>
 
 ### My biggest piece of advice is this is the entrence, not the destination.
-If I could give you one take away, it would be excitement.
+Of the four books I have bought on data structures and algorithms, here are my
+recommended 2.
+<br/>
+(yes they are amazon affiliate links) <br/>
+(but i have read both, multiple times, and bought the academic one 3 times) <br/>
+
+<br/>
+<br/>
+
+[The Introduction to Algorithms](https://amzn.to/3bYmBMu) <br/>
+This one is pretty girthy, but its definitely the best there is.
+
+<br/>
+<br/>
+
+[For Programmers Who Don't Know How To DataStructure And Would Like To Do Other Things Well Too](https://amzn.to/3Qp9KlB) <br/>
+This one is way more beginner friendly, and will help reinforce most things we
+learn today and other things as well.  Its a bit lacking though in its
+completeness.
 
 <br/>
 <br/>
