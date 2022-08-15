@@ -3,6 +3,25 @@ title: "The Last Algorithms Class You Need"
 description: "The greatest experience by the greatest live coder ever"
 ---
 
+## Welcome
+The Last Algorithms Class You Need
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 ## The Last course you will ever need?
 That seems a bit much, huh?
 
