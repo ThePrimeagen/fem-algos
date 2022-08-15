@@ -28,6 +28,11 @@ know they work.
 
 <br/>
 <br/>
+
+(we wont demistify `{}`, those are different data structures than a hash map)
+
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
@@ -43,8 +48,8 @@ know they work.
 
 ### Terms
 load factor:  The amount of data points vs the amount of storage (`data.len / storage.capacity`)<br/>
-key: a value that is hashable and is used to look up data<br/>
-value: a value that is retrievable in O(1) time<br/>
+key: a value that is hashable and is used to look up data.  The hash has to be consistent.<br/>
+value: a value that is associated with a key<br/>
 collision: when 2 keys map to the same cell.<br/>
 
 <br/>
@@ -84,7 +89,7 @@ collision: when 2 keys map to the same cell.<br/>
 <br/>
 <br/>
 
-### Depending on the Time
+### Unlikely, but if there is time
 Lets implement one!
 
 <br/>

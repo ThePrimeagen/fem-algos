@@ -202,6 +202,29 @@ Breadth first search.
 <br/>
 <br/>
 
+### One Question
+What do you like more?
+* BFS?
+* DFS?
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+
 ### PRACTICE PROBLEM!
 This use to be a very common problem in the hiring world.
 
@@ -228,6 +251,28 @@ Lets first whiteboard it
 
 ### Questions before we implement it?
 (to the greatest editor)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### One quick note
+We did not talk about 2 things (likely)
+1. We did not cover running times, I will leave this up to you to ponder on.
+1. We did not talk about insertion or deletion from a tree.  Though radical, it
+   would extend this section a bit too long.  Its just a more complicated
+   linked list operation.
 
 <br/>
 <br/>

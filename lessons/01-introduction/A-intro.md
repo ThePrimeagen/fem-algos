@@ -226,3 +226,55 @@ Yes trying to have the smallest intro ever on FEM.
 <br/>
 <br/>
 
+### One last note.
+When I was at university, this 2 day course will approximate my 2nd semestar
+class.  There is only one problem.  My class met 3 times a week, for one hour,
+for 15 weeks.  That is 45 hours of class time.  On top of that, every 1 hour of
+class, I was expected to study for 4 hours.  On top of that, I had a 1 hour
+lab, which was expected to spend 5 hours preparing for.
+
+<br/>
+<br/>
+
+So that means this class is meant to represent what would typically take 3 * 15
++ 15 * 5 hours worth of work, or 120 hours.  But I have less than 16, including
+lunch breaks.
+
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### My biggest piece of advice is this is the entrence, not the destination.
+If I could give you one take away, it would be excitement.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+

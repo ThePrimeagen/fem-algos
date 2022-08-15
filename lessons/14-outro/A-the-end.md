@@ -70,6 +70,11 @@ coconut oil'd experience?
 
 <br/>
 <br/>
+
+Don't lie to me...
+
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
@@ -84,17 +89,18 @@ coconut oil'd experience?
 <br/>
 
 ### What's next?
-Shockingly, we only touched the simple data structures of computer science.  I
-tried to cram every inch of possible Data Structures in such a short period of
-time.
+Shockingly, most of the "data structures" of computer science, but few of the
+algorithms.
 
 <br/>
 <br/>
 
-### Part 2?
-Part 2 will be something that is more involved in graph data structures,
-dynamic programming (i have always found this to be the hardest concept), and
-other fun DSAs out there.
+In other words, what's next other than the entire world?
+
+* Tons of graph data structures
+* exotic tree algorithms
+* implementing anything in Rust
+* using (neo)vim
 
 <br/>
 <br/>

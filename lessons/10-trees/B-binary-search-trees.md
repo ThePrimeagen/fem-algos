@@ -30,9 +30,6 @@ ordering to the data within the data structure.
   * Running time?
 * Insertion
   * what does this do to running time?
-* Deletion
-  * what does this do to running time?
-* Iterator
 
 <br/>
 <br/>
@@ -71,26 +68,6 @@ ordering to the data within the data structure.
 Binary search an array vs a tree?
 
 * What feels easier to implement?
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-### Balancing trees
-There are algorithms that can be used to make balanced trees, which improves
-the performance of a BST.  These algorithms are quite in-depth so therefore
-I'll be saving them for part two where we can deep dive into the complex algos.
 
 <br/>
 <br/>

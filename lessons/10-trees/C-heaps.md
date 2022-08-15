@@ -49,7 +49,7 @@ is smaller (MaxHeap), or larger (MinHeap) than the current node.
 ### Some cool characteristics
 * It is self balancing
 * It can be used for priority
-* I personally think its one of the harder data structures to implement
+* Funnest data structure to implement, but easy to get wrong!
 
 <br/>
 <br/>
@@ -84,8 +84,8 @@ Lets implement it!
 <br/>
 <br/>
 
-### Print the contents of the arrays as we pop / push
-This is javascript, I think you will see a couple problems...
+### Careful about garbage.
+the previous values in the array remain unless you nil them out...
 
 <br/>
 <br/>

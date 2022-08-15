@@ -60,7 +60,9 @@ into algorithms, we are going to keep the information shorter on the graph side.
 
 ### Terminology of Graphs
 This is not an exhaustive list of terms, but it is the terms that we may end up
-using today.
+using today.<br/>
+
+<br/>
 
 #### Graph Terms
 cycle: When you start at Node(x), follow the links, and end back at Node(x)<br/>
@@ -71,10 +73,13 @@ undirected: !directed.  Think Facebook (i haven't been on in 10 years, it may ha
 weighted: The edges have a weight associated with them.  Think Maps<br/>
 dag: Directed, acyclic graph.<br/>
 
+<br/>
+
 #### Implementation Terms
 node: a point or vertex on the graph<br/>
 edge: the connection betxit two nodes<br/>
 
+<br/>
 
 #### Big O
 BigO is commonly stated in terms of `V` and `E` where `V` stands for vertices
@@ -119,7 +124,13 @@ every edge
 <br/>
 
 ### Basic Searches
-BFS and DFS still exist on a graph, but it looks different now.
+BFS and DFS still exist on a graph, and they are virtually no different than on
+a tree.
+
+<br/>
+<br/>
+
+(whiteboard + complexity)
 
 <br/>
 <br/>
@@ -155,27 +166,11 @@ BFS and DFS still exist on a graph, but it looks different now.
 <br/>
 <br/>
 
-### What is the running time of BFS or DFS?
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
 ### Dijkstra's Shortest Path
 * what is it?
 * where is it used?
 * variations of it
+(don't whiteboard yet)
 
 <br/>
 <br/>
