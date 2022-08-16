@@ -7,7 +7,6 @@ description: "Everything we have learned will now be used."
 You are nervous, but ready. <br/>
 Did the algorithms course, Mom's spagetti <br/>
 
-
 <br/>
 <br/>
 <br/>
