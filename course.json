@@ -13,5 +13,5 @@
   },
   "description": "This course is designed for those who have near zero knowledge of DSA and desire to become great.",
   "keywords": ["ThePrimeagen", "Live Coding", "TypeScript", "JavaScript", "Algorithms", "DataStructures", "Data Structures", "TS"],
-  "productionBaseUrl": "/dsa"
+  "productionBaseUrl": "/fem-algos"
 }
