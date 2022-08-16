@@ -206,7 +206,9 @@ const a = [];
 * I am CEO of TheStartup
 ![TheStartup](./images/TheStartup.jpeg)
 * I rant [https://youtube.com/ThePrimeagen](https://youtube.com/ThePrimeagen)
+![YouTube](./images/YT.png)
 * I scream while coding [https://twitch.tv/ThePrimeagen](https://twitch.tv/ThePrimeagen)
+![Twitch](./images/TWITCH.png)
 * I shit post [https://twitter.com/ThePrimeagen](https://twitter.com/ThePrimeagen)
 ![Shit Post](./images/twitter.png)
 

@@ -124,7 +124,9 @@ also the simplest way to display recursion.
 <br/>
 
 ### The biggest mistake of recursion
-Don't put it into the 2 steps.  1. Base Case, 2. Recurse
+Don't put it into the 2 steps.
+1. Base Case
+2. Recurse
 
 <br/>
 <br/>

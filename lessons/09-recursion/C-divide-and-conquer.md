@@ -105,6 +105,7 @@ use was quicksort
 To NeoVim.  The truest and greatest vimming experience ever...
 
 Did you know I taught a course on vim?
+[My Course on Vim](https://www.frontendmasters.com/courses/vim-fundamentals)
 ![I Use Vim](./images/vim.png)
 
 <br/>

@@ -41,7 +41,7 @@ hurts. sorry.
 <br/>
 <br/>
 
-### So what is it?
+### if const a = [] isn't an array, what is it?
 Well by the end of this section we can empirically tell what it is.
 
 <br/>
