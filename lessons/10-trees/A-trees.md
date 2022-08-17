@@ -53,6 +53,62 @@ our skills together.
 <br/>
 <br/>
 
+### Welcome to day 2!!!
+This is day two and we will be jumping right in!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### Also I am plaque licking close to YT
+Less than 4k subs.  So pumped
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### For those just coming back after day 1
+So for day one we covered everything to do with lists.  We focused heartily on
+them.  Today we will be focusing on more complex algorithms.  We will be
+focusing on Trees/Graphs/Maps.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 ### Where are trees?
 * Your filesystem is a tree
 * The dom is a tree
@@ -251,28 +307,6 @@ Lets first whiteboard it
 
 ### Questions before we implement it?
 (to the greatest editor)
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-### One quick note
-We did not talk about 2 things (likely)
-1. We did not cover running times, I will leave this up to you to ponder on.
-1. We did not talk about insertion or deletion from a tree.  Though radical, it
-   would extend this section a bit too long.  Its just a more complicated
-   linked list operation.
 
 <br/>
 <br/>

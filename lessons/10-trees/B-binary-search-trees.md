@@ -30,6 +30,8 @@ ordering to the data within the data structure.
   * Running time?
 * Insertion
   * what does this do to running time?
+* Deletion
+  * Trickier than you thought? O Y E S
 
 <br/>
 <br/>

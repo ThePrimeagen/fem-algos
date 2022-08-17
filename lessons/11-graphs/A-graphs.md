@@ -5,9 +5,10 @@ description: "So much here"
 
 ### The most bestest of the data structures
 SOOO many problems eventually become graph problems.  And this is by far the
-largest section of algorithms.  Since this is more of an introduction course
-into algorithms, we are going to keep the information shorter on the graph side.
+largest section of algorithms.
 
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>

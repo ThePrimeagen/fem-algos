@@ -89,23 +89,3 @@ collision: when 2 keys map to the same cell.<br/>
 <br/>
 <br/>
 
-### Unlikely, but if there is time
-Lets implement one!
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-
-

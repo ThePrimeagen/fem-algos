@@ -3,8 +3,8 @@ title: "Everything"
 description: "Everything we have learned will now be used."
 ---
 
-### What is this?
-What a wierd sound my phone just made...
+### Lets put it all into practice
+Lets talk about an LRU!
 
 <br/>
 <br/>
@@ -20,26 +20,36 @@ What a wierd sound my phone just made...
 <br/>
 <br/>
 <br/>
-
-### A linkedin notification?
-I have linked in installed?
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <br/>
 <br/>
 
-### Its an interview???
-Yes!!
+### What is an lru?
+lets white board one out.
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+### If there is time
+Lets implement this bad boi
+
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
