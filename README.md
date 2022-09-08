@@ -11,7 +11,7 @@ Do not be discouraged, data structures and algorithms take effort and practice!
 [Algorithms](https://frontendmasters.com/courses/algorithms)
 
 ### Others
-[VIM](https://frontendmasters.com/courses/vim-fundamentals/)
-[Developer Productivity](https://frontendmasters.com/courses/developer-productivity/)
-[Learn Rust + Go](https://frontendmasters.com/courses/typescript-go-rust)
+[VIM](https://frontendmasters.com/courses/vim-fundamentals/)<br/>
+[Developer Productivity](https://frontendmasters.com/courses/developer-productivity/)<br/>
+[Learn Rust + Go](https://frontendmasters.com/courses/typescript-go-rust)<br/>
 
