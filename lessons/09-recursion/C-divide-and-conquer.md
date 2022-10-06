@@ -27,7 +27,7 @@ You may have forgot, but I did say we have 2 sorts to do.
 <br/>
 <br/>
 
-### What is Divide and Conque?
+### What is Divide and Conquer?
 
 <br/>
 <br/>
