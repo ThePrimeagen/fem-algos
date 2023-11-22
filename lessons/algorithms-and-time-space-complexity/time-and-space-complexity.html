@@ -1,0 +1,551 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><title>Time And Space – The Last Algorithms Course You&#x27;ll Need</title><meta name="description" content="This course is designed for those who have near zero knowledge of DSA and desire to become great."/><meta name="og:description" content="This course is designed for those who have near zero knowledge of DSA and desire to become great."/><meta name="og:title" content="Time And Space – The Last Algorithms Course You&#x27;ll Need"/><meta name="og:image" content="/fem-algos/images/social-share-cover.jpg"/><meta name="twitter:card" content="summary_large_image"/><meta name="next-head-count" content="8"/><link rel="preload" href="/fem-algos/_next/static/css/dd3a156ae8df4e80.css" as="style"/><link rel="stylesheet" href="/fem-algos/_next/static/css/dd3a156ae8df4e80.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/fem-algos/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/fem-algos/_next/static/chunks/webpack-8a63978a4fda985a.js" defer=""></script><script src="/fem-algos/_next/static/chunks/framework-fc97f3f1282ce3ed.js" defer=""></script><script src="/fem-algos/_next/static/chunks/main-06f6b1be6eae4dee.js" defer=""></script><script src="/fem-algos/_next/static/chunks/pages/_app-9be41cdf52627608.js" defer=""></script><script src="/fem-algos/_next/static/chunks/pages/lessons/%5Bsection%5D/%5Bslug%5D-c4da4d66ee4de1e8.js" defer=""></script><script src="/fem-algos/_next/static/uI2MgrY7wIa-5INqja6vX/_buildManifest.js" defer=""></script><script src="/fem-algos/_next/static/uI2MgrY7wIa-5INqja6vX/_ssgManifest.js" defer=""></script><script src="/fem-algos/_next/static/uI2MgrY7wIa-5INqja6vX/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="remix-app"><header class="navbar"><h1 class="navbar-brand"><a href="/fem-algos">The Last Algorithms Course You&#x27;ll Need</a></h1><div class="navbar-info"><a href="https://frontendmasters.com/courses/algorithms" class="cta-btn">Watch on Frontend Masters</a></div></header><div class="content-container"><div class="main"><div class="lesson-container"><div class="lesson"><div class="lesson-content"><h3 id="the-very-first-thing-we-tackle">The very first thing we tackle</h3>
+<p>Time and Space.  Big O as they call it.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h2 id="what-is-big-o">What is Big O</h2>
+<p>Big O is a way to categorize your algorithms time or memory requirements based
+on input.  It is not meant to be an exact measurement.  It will not tell you
+how many CPU cycles it takes, instead it is meant to generalize the growth of
+your algorithm.</p>
+<br/>
+<br/>
+
+<h3 id="example">Example</h3>
+<p>So when someone says Oh of N, they mean your algorithm will grow linearily
+based on input.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h2 id="why-do-we-use-it">Why do we use it?</h2>
+<p>Often it will help us make decisions about what data structures and algorithms
+to use.  Knowing how they will perform can greatly help create the best
+possible program out there.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="so-lets-do-a-small-example">So lets do a small example</h3>
+<p>First, Lets consider the following code.</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum_char_codes</span>(<span class="hljs-params">n: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n.<span class="hljs-property">length</span>; ++i) {
+        sum += n.<span class="hljs-title function_">charCodeAt</span>(i);
+    }
+
+    <span class="hljs-keyword">return</span> sum;
+}
+</code></pre>
+<h3 id="for-those-that-know-big-o-this-is-easy">For those that know big o, this is easy</h3>
+<p>But those who have never even classified a function, this may be a complete
+mystery.  That is fine.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="big-o-said-differently">Big O, said differently</h3>
+<p>As your input grows, how fast does computation or memory grow?</p>
+<br/>
+<br/>
+
+<h3 id="important-concepts">Important concepts</h3>
+<ol>
+<li>growth is with respect to the input</li>
+</ol>
+<br/>
+<br/>
+
+<h3 id="in-the-real-world">In the real world</h3>
+<p>obviously memory growing is not computationally free, but in the matter of
+thinking about algorithms, we don&#39;t necessarily think about that.</p>
+<br/>
+<br/>
+
+<p>In languages like Go or JavaScript you pay even heavier penalties because the
+memory can be kept around, grows faster, and causes complete halts in your
+program for cleanup.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="lets-go-back-to-our-example">Lets go back to our example</h3>
+<p>Lets look at input.  How does our program&#39;s execution time grow with respect to
+input?</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum_char_codes</span>(<span class="hljs-params">n: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n.<span class="hljs-property">length</span>; ++i) {
+        sum += n.<span class="hljs-title function_">charCodeAt</span>(i);
+    }
+
+    <span class="hljs-keyword">return</span> sum;
+}
+</code></pre>
+<br>
+<br>
+
+<p>Me&gt; It may or may not be obvious, but we have an <code>N</code> relationship.  <code>O(N)</code> time complexity</p>
+<br>
+
+<p>You&gt; How can you tell?</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="simplest-trick-for-complexity">Simplest trick for complexity</h3>
+<p>Look for loops</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum_char_codes</span>(<span class="hljs-params">n: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n.<span class="hljs-property">length</span>; ++i) {
+        sum += n.<span class="hljs-title function_">charCodeAt</span>(i);
+    }
+
+    <span class="hljs-keyword">return</span> sum;
+}
+</code></pre>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="whats-the-running-time">What&#39;s the running time</h3>
+<p>If the previous was O(N), what&#39;s this?</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum_char_codes</span>(<span class="hljs-params">n: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n.<span class="hljs-property">length</span>; ++i) {
+        sum += n.<span class="hljs-title function_">charCodeAt</span>(i);
+    }
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n.<span class="hljs-property">length</span>; ++i) {
+        sum += n.<span class="hljs-title function_">charCodeAt</span>(i);
+    }
+
+    <span class="hljs-keyword">return</span> sum;
+}
+</code></pre>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<p><img src="/fem-algos/./images/2n.jpg" alt="It 2N?"></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="important-concepts-1">Important concepts</h3>
+<ol>
+<li>growth is with respect to the input</li>
+<li>Constants are dropped</li>
+</ol>
+<p><code>O(2N)</code> -&gt; <code>O(N)</code> and this makes sense.  That is because Big O is meant to
+describe the upper bound of the algorithm (the growth of the algorithm).  The
+constant eventually becomes irrelevant.</p>
+<br/>
+<br/>
+
+<p>Take the following:</p>
+<p>N = 1, O(10N) = 10, O(N^2) = 1</p>
+<br/>
+
+<p>N = 5, O(10N) = 50, O(N^2) = 25</p>
+<br/>
+
+<p>N = 100, O(10N) = 1,000, O(N^2) = 10,000 // 10x bigger</p>
+<br/>
+
+<p>N = 1000, O(10N) = 10,000, O(N^2) = 1,000,000 // 100x bigger</p>
+<br/>
+
+<p>N = 10000, O(10N) = 100,000, O(N^2) = 100,000,000 // 1000x bigger</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="there-is-practical-vs-theoretical-differences">There is practical vs theoretical differences</h3>
+<p>Just because N is faster than N^2, doesn&#39;t mean practically its always faster
+for smaller input.</p>
+<br/>
+<br/>
+
+<p>Remember, we drop constants.  Therefore O(100N) is faster than O(N^2) but
+practically speaking, you would probably win for some small set of input.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="lets-do-another-example">Lets do another example</h3>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum_char_codes</span>(<span class="hljs-params">n: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n.<span class="hljs-property">length</span>; ++i) {
+        <span class="hljs-keyword">const</span> charCode = n.<span class="hljs-title function_">charCodeAt</span>(i);
+        <span class="hljs-comment">// Capital E</span>
+        <span class="hljs-keyword">if</span> (charCode === <span class="hljs-number">69</span>) {
+            <span class="hljs-keyword">return</span> sum;
+        }
+
+        sum += charCode;
+    }
+
+    <span class="hljs-keyword">return</span> sum;
+}
+</code></pre>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="in-bigo-we-often-consider-the-worst-case">In BigO we often consider the worst case</h3>
+<p>Especially in interviews (i have never been asked for best, average, and worst
+case, just worst case). <br/></p>
+<p>E = 69 <br/></p>
+<p>Therefore any string with E in it will terminate early (unless E is the last item in the list). <br/></p>
+<p>ITS STILL <code>O(N)</code> <br/></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="important-concepts-2">Important concepts</h3>
+<ol>
+<li>growth is with respect to the input</li>
+<li>Constants are dropped</li>
+<li>Worst case is <em>usually</em> the way we measure,</li>
+</ol>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="the-common-complexities">The common complexities</h3>
+<p><a href="https://www.hackerearth.com/practice/notes/big-o-cheatsheet-series-data-structures-and-algorithms-with-thier-complexities-1/">Source</a>
+<img src="/fem-algos/./images/big-o-face.png" alt="Big O Notation"></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="some-examples">Some examples</h3>
+<h2 id="on2">O(N^2)</h2>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum_char_codes</span>(<span class="hljs-params">n: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n.<span class="hljs-property">length</span>; ++i) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; n.<span class="hljs-property">length</span>; ++j) {
+            sum += charCode;
+        }
+    }
+
+    <span class="hljs-keyword">return</span> sum;
+}
+</code></pre>
+<h2 id="on3">O(N^3)</h2>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum_char_codes</span>(<span class="hljs-params">n: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; n.<span class="hljs-property">length</span>; ++i) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; n.<span class="hljs-property">length</span>; ++j) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> k = <span class="hljs-number">0</span>; k &lt; n.<span class="hljs-property">length</span>; ++k) {
+                sum += charCode;
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> sum;
+}
+</code></pre>
+<h2 id="on-log-n">O(n log n)</h2>
+<ul>
+<li>Quicksort (we will implement and explain)</li>
+</ul>
+<h2 id="olog-n">O(log n)</h2>
+<ul>
+<li>Binary search trees</li>
+</ul>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="there-is-one-time-that-we-will-see-today-that-hasnt-been-mentioned">There is one time that we will see today, that hasn&#39;t been mentioned</h3>
+<p>O(sqrt(n))</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h2 id="why-so-obviated">Why so obviated?</h2>
+<p>There are other resources out there to dive deep into big o notation.  And I
+just don&#39;t think we need Yet Another Big O explanation.  Instead I am going to
+focus on actively looking at running times and we will determine things
+together.</p>
+<br/>
+<br/>
+
+<h3 id="important-concepts-3">Important concepts</h3>
+<ol>
+<li>growth is with respect to the input</li>
+<li>Constants are dropped</li>
+<li>Worst case is <em>usually</em> the way we measure</li>
+</ol>
+<br/>
+<br/>
+
+<h3 id="one-more-note">One more note</h3>
+<p>Is there anything else besides Big O?  Well, there is technically a bunch of
+different ways to measure the complexity of algorithms, but in general the
+easiest one to use is the &quot;Upper Bound&quot;</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="space-the-final-frontier">Space the Final Frontier</h3>
+<p>We pretty much wont be going over space in this course.  Just not something we
+will be discussing.  I find this less consequetial in daily life considering I
+see things like this.</p>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">// or whatever it is in react</span>
+<span class="hljs-comment">// O(N) time + O(N) space!  COUNT ME IN</span>
+<span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Component</span>
+            <span class="hljs-attr">...props</span> /&gt;</span></span>
+</code></pre>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<h3 id="before-we-go">Before we go</h3>
+<p>Questions?</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+</div><div class="lesson-links"><a href="/fem-algos/lessons/introduction/intro" class="prev">← Previous</a><a href="/fem-algos/lessons/our-first-datastructure/ready" class="next">Next →</a></div></div><div class="details-bg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="154" height="154" viewBox="0 0 154 154"><defs><clipPath id="clip-path"><rect id="Rectangle_2238" data-name="Rectangle 2238" width="154" height="154" transform="translate(9467 350)" fill="#fff" stroke="#707070" stroke-width="1"></rect></clipPath><clipPath id="clip-corner-image-active"><rect width="154" height="154"></rect></clipPath></defs><g id="corner-image-active" clip-path="url(#clip-corner-image-active)"><g id="Corner-image-active-2" data-name="Corner-image-active" transform="translate(-9467 -350)" clip-path="url(#clip-path)"><path id="Subtraction_34" data-name="Subtraction 34" d="M-3857.365,1740.766h0l-7.07-7.07,12.89-12.89v14.142l-5.818,5.818Zm-14.142-14.142h0l-7.071-7.07,27.033-27.033v14.143l-19.96,19.96Zm-14.143-14.143h0l-7.07-7.069,41.175-41.175v14.142Zm-14.142-14.142h0l-7.07-7.069,55.317-55.317v14.142Zm-14.142-14.142h0l-7.07-7.069,69.459-69.459v14.142Zm-14.142-14.142h0l-7.07-7.069,76.739-76.739h6.862v7.28Zm-14.143-14.143h0l-7.07-7.069,62.6-62.6h14.142Zm-14.142-14.142h0l-7.07-7.069,48.454-48.454h14.142Zm-14.142-14.142h0l-7.07-7.069,34.312-34.312h14.142Zm-14.142-14.142h0l-7.07-7.069,20.17-20.17h14.142Zm-14.142-14.142h0l-7.071-7.071,6.027-6.027h14.144l-13.1,13.1Zm367.24-56.114v-.909l.455.455-.453.453Z" transform="translate(13472.546 -1236.766)" fill="var(--corner-fill)"></path></g></g></svg></div></div></div></div><footer class="footer"><ul class="socials"><li class="social"><a href="https://twitter.com/theprimeagen"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="32" viewBox="0 0 40 32"><defs><clipPath id="clip-twitter-social"><rect width="40" height="32"></rect></clipPath></defs><g id="twitter-social" clip-path="url(#clip-twitter-social)"><g id="Group_269" data-name="Group 269" transform="translate(-230.23 -1140.849)"><path id="Path_419" data-name="Path 419" d="M266.12,1148.861v1.035a23.092,23.092,0,0,1-1.507,8.1,24.08,24.08,0,0,1-4.475,7.381,22.175,22.175,0,0,1-7.306,5.4,24.129,24.129,0,0,1-10,2.07,23.7,23.7,0,0,1-6.667-.945,22.83,22.83,0,0,1-5.936-2.655q.959.091,1.963.09a16.518,16.518,0,0,0,5.434-.9,17.111,17.111,0,0,0,4.749-2.52,8.275,8.275,0,0,1-4.749-1.643,7.8,7.8,0,0,1-2.877-3.983,8.268,8.268,0,0,0,1.507.135,8.58,8.58,0,0,0,2.146-.27,8.16,8.16,0,0,1-5.685-4.344,8.326,8.326,0,0,1-.89-3.578v-.135a7.775,7.775,0,0,0,3.744,1.035,8.183,8.183,0,0,1-2.671-2.9,7.817,7.817,0,0,1-.982-3.848,7.948,7.948,0,0,1,1.1-4.05,23.53,23.53,0,0,0,16.895,8.46,9.221,9.221,0,0,1-.183-1.845,7.787,7.787,0,0,1,1.1-4.05,8.216,8.216,0,0,1,2.991-2.948,7.991,7.991,0,0,1,4.087-1.1,8.184,8.184,0,0,1,5.982,2.566,16.087,16.087,0,0,0,5.205-1.98,7.784,7.784,0,0,1-1.393,2.588,8.4,8.4,0,0,1-2.215,1.913,16.856,16.856,0,0,0,4.749-1.305A17.032,17.032,0,0,1,266.12,1148.861Z" fill="var(--icons)"></path></g></g></svg></a></li><li class="social"><a href="https://twitch.tv/theprimeagen"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.836v-15.045h17.194v11.463zm-3.582-7.343v6.262h-2.149v-6.262h2.149zm-5.731 0v6.262h-2.149v-6.262h2.149z" fill-rule="evenodd" clip-rule="evenodd"></path></svg></a></li><li class="social"><a href="https://youtube.com/theprimeagen"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.836v-15.045h17.194v11.463zm-3.582-7.343v6.262h-2.149v-6.262h2.149zm-5.731 0v6.262h-2.149v-6.262h2.149z" fill-rule="evenodd" clip-rule="evenodd"></path></svg></a></li><li class="social"><div class="terms"><p>Content Licensed Under CC-BY-NC-4.0</p><p>Code Samples and Excercises Licensed Under Apache 2.0</p><p>Site Designed by<!-- --> <!-- --><a href="https://www.alexdanielson.com/">Alex Danielson</a></p></div></li></ul></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"attributes":{"title":"Time And Space","description":"This is not the final frontier"},"html":"\u003ch3 id=\"the-very-first-thing-we-tackle\"\u003eThe very first thing we tackle\u003c/h3\u003e\n\u003cp\u003eTime and Space.  Big O as they call it.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch2 id=\"what-is-big-o\"\u003eWhat is Big O\u003c/h2\u003e\n\u003cp\u003eBig O is a way to categorize your algorithms time or memory requirements based\non input.  It is not meant to be an exact measurement.  It will not tell you\nhow many CPU cycles it takes, instead it is meant to generalize the growth of\nyour algorithm.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"example\"\u003eExample\u003c/h3\u003e\n\u003cp\u003eSo when someone says Oh of N, they mean your algorithm will grow linearily\nbased on input.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch2 id=\"why-do-we-use-it\"\u003eWhy do we use it?\u003c/h2\u003e\n\u003cp\u003eOften it will help us make decisions about what data structures and algorithms\nto use.  Knowing how they will perform can greatly help create the best\npossible program out there.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"so-lets-do-a-small-example\"\u003eSo lets do a small example\u003c/h3\u003e\n\u003cp\u003eFirst, Lets consider the following code.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-typescript\"\u003e\u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003esum_char_codes\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003en: \u003cspan class=\"hljs-built_in\"\u003estring\u003c/span\u003e\u003c/span\u003e): \u003cspan class=\"hljs-built_in\"\u003enumber\u003c/span\u003e {\n    \u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e sum = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e;\n    \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e i = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; i \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++i) {\n        sum += n.\u003cspan class=\"hljs-title function_\"\u003echarCodeAt\u003c/span\u003e(i);\n    }\n\n    \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e sum;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"for-those-that-know-big-o-this-is-easy\"\u003eFor those that know big o, this is easy\u003c/h3\u003e\n\u003cp\u003eBut those who have never even classified a function, this may be a complete\nmystery.  That is fine.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"big-o-said-differently\"\u003eBig O, said differently\u003c/h3\u003e\n\u003cp\u003eAs your input grows, how fast does computation or memory grow?\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"important-concepts\"\u003eImportant concepts\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003egrowth is with respect to the input\u003c/li\u003e\n\u003c/ol\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"in-the-real-world\"\u003eIn the real world\u003c/h3\u003e\n\u003cp\u003eobviously memory growing is not computationally free, but in the matter of\nthinking about algorithms, we don\u0026#39;t necessarily think about that.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003cp\u003eIn languages like Go or JavaScript you pay even heavier penalties because the\nmemory can be kept around, grows faster, and causes complete halts in your\nprogram for cleanup.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"lets-go-back-to-our-example\"\u003eLets go back to our example\u003c/h3\u003e\n\u003cp\u003eLets look at input.  How does our program\u0026#39;s execution time grow with respect to\ninput?\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-typescript\"\u003e\u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003esum_char_codes\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003en: \u003cspan class=\"hljs-built_in\"\u003estring\u003c/span\u003e\u003c/span\u003e): \u003cspan class=\"hljs-built_in\"\u003enumber\u003c/span\u003e {\n    \u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e sum = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e;\n    \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e i = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; i \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++i) {\n        sum += n.\u003cspan class=\"hljs-title function_\"\u003echarCodeAt\u003c/span\u003e(i);\n    }\n\n    \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e sum;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cbr\u003e\n\u003cbr\u003e\n\n\u003cp\u003eMe\u0026gt; It may or may not be obvious, but we have an \u003ccode\u003eN\u003c/code\u003e relationship.  \u003ccode\u003eO(N)\u003c/code\u003e time complexity\u003c/p\u003e\n\u003cbr\u003e\n\n\u003cp\u003eYou\u0026gt; How can you tell?\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"simplest-trick-for-complexity\"\u003eSimplest trick for complexity\u003c/h3\u003e\n\u003cp\u003eLook for loops\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-typescript\"\u003e\u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003esum_char_codes\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003en: \u003cspan class=\"hljs-built_in\"\u003estring\u003c/span\u003e\u003c/span\u003e): \u003cspan class=\"hljs-built_in\"\u003enumber\u003c/span\u003e {\n    \u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e sum = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e;\n    \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e i = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; i \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++i) {\n        sum += n.\u003cspan class=\"hljs-title function_\"\u003echarCodeAt\u003c/span\u003e(i);\n    }\n\n    \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e sum;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"whats-the-running-time\"\u003eWhat\u0026#39;s the running time\u003c/h3\u003e\n\u003cp\u003eIf the previous was O(N), what\u0026#39;s this?\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-typescript\"\u003e\u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003esum_char_codes\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003en: \u003cspan class=\"hljs-built_in\"\u003estring\u003c/span\u003e\u003c/span\u003e): \u003cspan class=\"hljs-built_in\"\u003enumber\u003c/span\u003e {\n    \u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e sum = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e;\n    \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e i = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; i \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++i) {\n        sum += n.\u003cspan class=\"hljs-title function_\"\u003echarCodeAt\u003c/span\u003e(i);\n    }\n\n    \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e i = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; i \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++i) {\n        sum += n.\u003cspan class=\"hljs-title function_\"\u003echarCodeAt\u003c/span\u003e(i);\n    }\n\n    \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e sum;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003cp\u003e\u003cimg src=\"/fem-algos/./images/2n.jpg\" alt=\"It 2N?\"\u003e\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"important-concepts-1\"\u003eImportant concepts\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003egrowth is with respect to the input\u003c/li\u003e\n\u003cli\u003eConstants are dropped\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e\u003ccode\u003eO(2N)\u003c/code\u003e -\u0026gt; \u003ccode\u003eO(N)\u003c/code\u003e and this makes sense.  That is because Big O is meant to\ndescribe the upper bound of the algorithm (the growth of the algorithm).  The\nconstant eventually becomes irrelevant.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003cp\u003eTake the following:\u003c/p\u003e\n\u003cp\u003eN = 1, O(10N) = 10, O(N^2) = 1\u003c/p\u003e\n\u003cbr/\u003e\n\n\u003cp\u003eN = 5, O(10N) = 50, O(N^2) = 25\u003c/p\u003e\n\u003cbr/\u003e\n\n\u003cp\u003eN = 100, O(10N) = 1,000, O(N^2) = 10,000 // 10x bigger\u003c/p\u003e\n\u003cbr/\u003e\n\n\u003cp\u003eN = 1000, O(10N) = 10,000, O(N^2) = 1,000,000 // 100x bigger\u003c/p\u003e\n\u003cbr/\u003e\n\n\u003cp\u003eN = 10000, O(10N) = 100,000, O(N^2) = 100,000,000 // 1000x bigger\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"there-is-practical-vs-theoretical-differences\"\u003eThere is practical vs theoretical differences\u003c/h3\u003e\n\u003cp\u003eJust because N is faster than N^2, doesn\u0026#39;t mean practically its always faster\nfor smaller input.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003cp\u003eRemember, we drop constants.  Therefore O(100N) is faster than O(N^2) but\npractically speaking, you would probably win for some small set of input.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"lets-do-another-example\"\u003eLets do another example\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-typescript\"\u003e\u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003esum_char_codes\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003en: \u003cspan class=\"hljs-built_in\"\u003estring\u003c/span\u003e\u003c/span\u003e): \u003cspan class=\"hljs-built_in\"\u003enumber\u003c/span\u003e {\n    \u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e sum = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e;\n    \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e i = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; i \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++i) {\n        \u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e charCode = n.\u003cspan class=\"hljs-title function_\"\u003echarCodeAt\u003c/span\u003e(i);\n        \u003cspan class=\"hljs-comment\"\u003e// Capital E\u003c/span\u003e\n        \u003cspan class=\"hljs-keyword\"\u003eif\u003c/span\u003e (charCode === \u003cspan class=\"hljs-number\"\u003e69\u003c/span\u003e) {\n            \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e sum;\n        }\n\n        sum += charCode;\n    }\n\n    \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e sum;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"in-bigo-we-often-consider-the-worst-case\"\u003eIn BigO we often consider the worst case\u003c/h3\u003e\n\u003cp\u003eEspecially in interviews (i have never been asked for best, average, and worst\ncase, just worst case). \u003cbr/\u003e\u003c/p\u003e\n\u003cp\u003eE = 69 \u003cbr/\u003e\u003c/p\u003e\n\u003cp\u003eTherefore any string with E in it will terminate early (unless E is the last item in the list). \u003cbr/\u003e\u003c/p\u003e\n\u003cp\u003eITS STILL \u003ccode\u003eO(N)\u003c/code\u003e \u003cbr/\u003e\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"important-concepts-2\"\u003eImportant concepts\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003egrowth is with respect to the input\u003c/li\u003e\n\u003cli\u003eConstants are dropped\u003c/li\u003e\n\u003cli\u003eWorst case is \u003cem\u003eusually\u003c/em\u003e the way we measure,\u003c/li\u003e\n\u003c/ol\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"the-common-complexities\"\u003eThe common complexities\u003c/h3\u003e\n\u003cp\u003e\u003ca href=\"https://www.hackerearth.com/practice/notes/big-o-cheatsheet-series-data-structures-and-algorithms-with-thier-complexities-1/\"\u003eSource\u003c/a\u003e\n\u003cimg src=\"/fem-algos/./images/big-o-face.png\" alt=\"Big O Notation\"\u003e\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"some-examples\"\u003eSome examples\u003c/h3\u003e\n\u003ch2 id=\"on2\"\u003eO(N^2)\u003c/h2\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-typescript\"\u003e\u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003esum_char_codes\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003en: \u003cspan class=\"hljs-built_in\"\u003estring\u003c/span\u003e\u003c/span\u003e): \u003cspan class=\"hljs-built_in\"\u003enumber\u003c/span\u003e {\n    \u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e sum = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e;\n    \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e i = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; i \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++i) {\n        \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e j = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; j \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++j) {\n            sum += charCode;\n        }\n    }\n\n    \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e sum;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"on3\"\u003eO(N^3)\u003c/h2\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-typescript\"\u003e\u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003esum_char_codes\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003en: \u003cspan class=\"hljs-built_in\"\u003estring\u003c/span\u003e\u003c/span\u003e): \u003cspan class=\"hljs-built_in\"\u003enumber\u003c/span\u003e {\n    \u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e sum = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e;\n    \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e i = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; i \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++i) {\n        \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e j = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; j \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++j) {\n            \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003elet\u003c/span\u003e k = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; k \u0026lt; n.\u003cspan class=\"hljs-property\"\u003elength\u003c/span\u003e; ++k) {\n                sum += charCode;\n            }\n        }\n    }\n    \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e sum;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"on-log-n\"\u003eO(n log n)\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eQuicksort (we will implement and explain)\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"olog-n\"\u003eO(log n)\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eBinary search trees\u003c/li\u003e\n\u003c/ul\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"there-is-one-time-that-we-will-see-today-that-hasnt-been-mentioned\"\u003eThere is one time that we will see today, that hasn\u0026#39;t been mentioned\u003c/h3\u003e\n\u003cp\u003eO(sqrt(n))\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch2 id=\"why-so-obviated\"\u003eWhy so obviated?\u003c/h2\u003e\n\u003cp\u003eThere are other resources out there to dive deep into big o notation.  And I\njust don\u0026#39;t think we need Yet Another Big O explanation.  Instead I am going to\nfocus on actively looking at running times and we will determine things\ntogether.\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"important-concepts-3\"\u003eImportant concepts\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003egrowth is with respect to the input\u003c/li\u003e\n\u003cli\u003eConstants are dropped\u003c/li\u003e\n\u003cli\u003eWorst case is \u003cem\u003eusually\u003c/em\u003e the way we measure\u003c/li\u003e\n\u003c/ol\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"one-more-note\"\u003eOne more note\u003c/h3\u003e\n\u003cp\u003eIs there anything else besides Big O?  Well, there is technically a bunch of\ndifferent ways to measure the complexity of algorithms, but in general the\neasiest one to use is the \u0026quot;Upper Bound\u0026quot;\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"space-the-final-frontier\"\u003eSpace the Final Frontier\u003c/h3\u003e\n\u003cp\u003eWe pretty much wont be going over space in this course.  Just not something we\nwill be discussing.  I find this less consequetial in daily life considering I\nsee things like this.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-typescript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// or whatever it is in react\u003c/span\u003e\n\u003cspan class=\"hljs-comment\"\u003e// O(N) time + O(N) space!  COUNT ME IN\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"language-xml\"\u003e\u003cspan class=\"hljs-tag\"\u003e\u0026lt;\u003cspan class=\"hljs-name\"\u003eComponent\u003c/span\u003e\n            \u003cspan class=\"hljs-attr\"\u003e...props\u003c/span\u003e /\u0026gt;\u003c/span\u003e\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n\u003ch3 id=\"before-we-go\"\u003eBefore we go\u003c/h3\u003e\n\u003cp\u003eQuestions?\u003c/p\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\u003cbr/\u003e\n\n","slug":"time-and-space-complexity","title":"Time And Space","section":"Algorithms and Time Space Complexity","icon":"dumpster-fire","filePath":"/home/runner/work/fem-algos/fem-algos/lessons/02-algorithms-and-time-space-complexity/A-time-and-space-complexity.md","nextSlug":"/fem-algos/lessons/our-first-datastructure/ready","prevSlug":"/fem-algos/lessons/introduction/intro"}},"__N_SSG":true},"page":"/lessons/[section]/[slug]","query":{"section":"algorithms-and-time-space-complexity","slug":"time-and-space-complexity"},"buildId":"uI2MgrY7wIa-5INqja6vX","assetPrefix":"/fem-algos","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
