@@ -270,7 +270,7 @@ There are great books and resources you can use.
 <br/>
 <br/>
 
-### My biggest piece of advice is this is the entrence, not the destination.
+### My biggest piece of advice is this is the entrance, not the destination.
 Of the four books I have bought on data structures and algorithms, here are my
 recommended 2.
 <br/>
